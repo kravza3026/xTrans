@@ -1,0 +1,9 @@
+.vscode
+.idea
+.temporary_cache
+
+dist
+node_modules
+gulp/version.json
+
+.codegpt

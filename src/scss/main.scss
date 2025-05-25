@@ -1,0 +1,33 @@
+// Подключение шрифтов локально из папки "./src/fonts"
+@use "config/fonts";
+
+// Подключение переменных
+@use "config/root";
+
+/** Обнуление */
+@use "config/reset";
+
+// Библиотеки, раскомментировать для использования
+ @use 'libs/aos';
+// @use 'libs/swiper';
+
+// Подключение custom scrollbar для всего сайта
+@use "config/scrollbar";
+
+// Общие параметры, шаблоны(заготовки) и вспомогательные классы
+@use "config/base";
+
+// БЕМ блоки используемые во всё проекте
+@use "config/common";
+
+@use "config/animations";
+
+// Подключение стилей отдельных блоков и секций
+@use "components/header";
+@use "components/popup";
+@use "components/checkbox";
+@use "components/tabs";
+@use "components/accordion";
+@use "components/footer";
+
+

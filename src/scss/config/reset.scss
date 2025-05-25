@@ -1,0 +1,151 @@
+@use "functions" as *;
+@use "mixins" as *;
+@use "vars" as global;
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html {
+	opacity: 0;
+	scroll-behavior: smooth;
+	transition: opacity 0.8s ease-in-out;
+
+	&.loaded {
+		opacity: 1;
+	}
+
+	&.lock {
+		touch-action: none;
+		overflow: hidden;
+
+		[data-lp] {
+			padding-inline-end: var(--bh-scrollbar-width, #{rem(16)});
+		}
+
+		.wrapper {
+			margin-inline-end: var(--bh-scrollbar-width, #{rem(16)});
+		}
+	}
+}
+
+html,
+body {
+	inline-size: 100%;
+	block-size: 100%;
+	min-inline-size: global.$min-width + px;
+
+}
+@media (min-width: 1361px) {
+body {
+	overscroll-behavior: none;
+	overflow-x: hidden;
+	line-height: 1;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	font-family: var(--bs-font-family), sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+}
+@media (max-width: 1360px) {
+	body{
+		font-size: 12px!important;
+	}
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+input[type="number"] {
+	appearance: textfield;
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		appearance: none;
+	}
+}
+
+button {
+	color: inherit;
+	cursor: pointer;
+	user-select: none;
+	background-color: transparent;
+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+a {
+	user-select: none;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+
+	&:visited {
+		text-decoration: none;
+	}
+}
+
+ul, ol {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+sup {
+	color: inherit;
+}

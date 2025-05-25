@@ -1,0 +1,33 @@
+:root {
+	// Семейство шрифта по умолчанию
+	--bs-font-family: "Inter", sans-serif;
+
+	// Размер шрифта по умолчанию
+	//--bs-font-size: 16px;
+
+	// Жирность шрифта по умолчанию
+	--bs-font-weight: 400;
+
+	// Базовая высота шрифта
+	--bs-line-height: 1;
+
+	// Цвет шрифта по умолчанию
+	--main-bg-color: #000000;
+	--color-orange: #FF8C00;
+	--text-red: #FF2F00;
+	--text-grey: #AAAAAA;
+	--main-white: #FFFFFF;
+	--color-blue: #565FF1;
+	--dark-grey: #1E1F22;
+	--bs-font-color: #222;
+	--bs-transition: 0.3s ease-in-out;
+	--bs-radius: 10px;
+	--primary-color: #131313;
+	--primary-hover-color: #2d2d2d;
+	--secondary-color: #DA2800;
+
+	--black-color: #131313;
+	--gray-color: #353538;
+	--bs-shadow: 0px 2px 3px #{rgba(#000, 10%)}, 0px 8px 3px #{rgba(#000, 10%)};
+	--hover-shadow: 0 0 5px 0 #{rgba(#000, 10%)}, 0 0 10px 0 #{rgba(#000, 10%)}, 0 0 15px 0 #{rgba(#000, 10%)};
+}

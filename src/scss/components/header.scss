@@ -1,0 +1,256 @@
+@use "../config/functions" as *;
+@use "../config/mixins" as *;
+@use "../config/vars" as global;
+
+.header {
+	z-index: 50;
+	inline-size: 100%;
+	transition: background-color var(--bs-transition);
+
+	.header-is-sticky & {
+		// ..стили для липкого хедера
+		position: fixed;
+		background-color: #007aff;
+	}
+
+	// .header__container
+	&__container {
+		display: flex;
+		block-size: rem(global.$header-height);
+		align-items: center;
+
+		.header-is-sticky & {
+			block-size: rem(global.$header-height - 50);
+		}
+	}
+}
+
+// Burger
+/*
+.icon-menu {
+  display: none;
+
+  @include media-mx(768) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+*/
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap');
+
+$primary-color: #fff;
+$background-color: #222;
+$transition-time: 0.3s;
+
+
+
+body {
+	background-color: $background-color;
+	color: $primary-color;
+}
+*{
+	transition: ease-in-out 0.2s;
+}
+@media(min-width: 1141px) {
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px;
+		position: relative;
+
+		.logo {
+			width: 240px;
+			height: auto;
+		}
+		.btn_menu{
+			transition: ease-in-out 0.2s;
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.nav_menu {
+			ul {
+				display: flex;
+				gap: .5vw;
+				list-style: none;
+
+				li a {
+
+					text-decoration: none;
+					transition: color $transition-time;
+
+
+				}
+			}
+		}
+
+		.nav_btn {
+			display: flex;
+			align-items: center;
+
+
+		}
+
+		// Сховаємо бургер на десктопі
+		.burger_menu {
+			display: none;
+		}
+	}
+}
+@media (max-width: 1440px) {
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px;
+		position: relative;
+
+		.logo {
+			transition: ease-in-out 0.2s;
+			width: 140px;
+			height: auto;
+		}
+		.btn_menu{
+			transition: ease-in-out 0.2s;
+			width: 120px;
+			img{
+				width: 100%;
+			}
+		}
+		.nav_menu {
+			ul {
+				display: flex;
+				gap: .5vw;
+				list-style: none;
+
+				li a {
+
+					text-decoration: none;
+					transition: color $transition-time;
+
+
+				}
+			}
+		}
+
+		.nav_btn {
+			display: flex;
+			align-items: center;
+
+
+		}
+
+		// Сховаємо бургер на десктопі
+		.burger_menu {
+			display: none;
+		}
+	}
+}
+// 📱 **Мобільна версія**
+@media (max-width: 994px) {
+	.nav_btn{
+
+	}
+	.nav {
+		.burger_menu {
+			display: flex;
+			background: none;
+			border: none;
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			align-items: center;
+			justify-content: center;
+			margin-left: 10px;
+
+			img {
+				width: 30px;
+				height: auto;
+			}
+		}
+
+		// Сховати список, доки не натиснута кнопка
+		.nav_menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.68);
+			transform: translateY(-100%);
+			transition: transform $transition-time ease-in-out;
+			text-align: center;
+			padding: 15px 0;
+			visibility: hidden;
+			opacity: 0;
+			z-index: 10;
+		}
+		.btn_menu{
+			width: 50%;
+			margin: auto;
+			img{
+				width: 100%;
+			}
+		}
+		.nav_menu.active {
+			transform: translateY(0);
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.nav_menu ul {
+			flex-direction: column;
+			padding: 0;
+			display: none;
+		}
+
+		.nav_menu.active ul {
+			display: flex;
+		}
+	}
+}
