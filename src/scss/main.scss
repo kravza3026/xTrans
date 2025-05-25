@@ -1,5 +1,5 @@
 // Подключение шрифтов локально из папки "./src/fonts"
-@use "config/fonts";
+//@use "config/fonts";
 
 // Подключение переменных
 @use "config/root";
@@ -15,12 +15,12 @@
 //@use "config/scrollbar";
 
 // Общие параметры, шаблоны(заготовки) и вспомогательные классы
-@use "config/base";
+//@use "config/base";
 
 // БЕМ блоки используемые во всё проекте
-@use "config/common";
+//@use "config/common";
 
-@use "config/animations";
+//@use "config/animations";
 
 // Подключение стилей отдельных блоков и секций
 @use "pages/pages";
