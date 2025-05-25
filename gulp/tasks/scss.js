@@ -22,11 +22,10 @@ export const scss = (isBuild, serverInstance) => {
 		noWebpClass: '.no-webp',
 	};
 
-	return gulp.src(filePaths.src.scss)
+	return gulp.src('src/scss/*.scss', { sourcemaps: !isBuild }) // Кожен SCSS окремо
 		.pipe(logger.handleError('SCSS'))
-
 		.pipe(plugins.if(!isBuild, sourcemaps.init()))
-		.pipe(sass({ outputStyle: 'expanded' }, null))
+		.pipe(sass({ outputStyle: 'expanded' }))
 		.pipe(plugins.replace(/@img\//g, '../images/'))
 
 		.pipe(plugins.if(isBuild, webpCss(webpConfig)))
@@ -36,8 +35,8 @@ export const scss = (isBuild, serverInstance) => {
 			postcssGroupMedia({ sort: 'desktop-first' }),
 		])))
 
-		/** Раскомментировать если нужен не сжатый дубль файла стилей */
-		// .pipe(gulp.dest(filePaths.build.css))
+		// Зберігаємо неконкатеновані .css файли
+		.pipe(gulp.dest(filePaths.build.css))
 
 		.pipe(plugins.if(isBuild, cleanCss()))
 		.pipe(rename({ extname: '.min.css' }))

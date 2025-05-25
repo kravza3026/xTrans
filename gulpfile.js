@@ -41,7 +41,7 @@ function watcher() {
 /**
  * Последовательная обработка шрифтов
  * */
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
+const fonts = gulp.series( ttfToWoff, fontStyle);
 
 /**
  * Параллельные задачи в режиме разработки

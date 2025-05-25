@@ -64,9 +64,9 @@ export const ttfToWoff = () => {
 		.pipe(gulp.dest(filePaths.src.fonts))
 
 		/** Если нужно раскомментировать. Конвертация в [.woff] */
-		//.pipe(gulp.src(`${filePaths.src.fonts}/*.ttf`))
-		//.pipe(fonter({ formats: ['woff'] }))
-		//.pipe(gulp.dest(filePaths.build.fonts))
+		.pipe(gulp.src(`${filePaths.src.fonts}/*.ttf`))
+		.pipe(fonter({ formats: ['woff'] }))
+		.pipe(gulp.dest(filePaths.build.fonts))
 
 		/** Поиск шрифтов [.woff, .woff2] и выгрузка в финальную папку */
 		.pipe(gulp.src(`${filePaths.src.fonts}/*.{woff,woff2}`))
