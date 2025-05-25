@@ -32,6 +32,71 @@ body {
 	height: 100%!important;
 	min-height: 100%!important;
 }
+.swiper-pagination-bullet{
+	border: 1px solid #737373;
+	background-color: #1A1B1D;
+	width: 9px!important;
+	height: 9px!important;
+	opacity: 1!important;
+}
+.swiper-pagination-bullet-active{
+	border: 1px solid var(--color-orange);
+	background-color: var(--color-orange)!important;
+	transition: ease-in-out 0.2s;
+	width: 13px!important;
+	height: 13px!important;
+}
+.swiper-button-prev{
+	width: 50px!important;
+	height: 50px!important;
+	left: 8%!important;
+	transition: ease-in-out 0.2s;
+	&:hover{
+		transform: scale(1.1);
+		transition: ease-in-out 0.2s;
+	}
+	&:after{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		border: none;
+		width: 50px!important;
+		height: 50px!important;
+		font-size: 24px!important;
+		color: white;
+		content: '←'!important;
+		border-radius: 100%;
+		background-color: var(--bg-arrows);
+	}
+
+}
+.swiper-button-next{
+	width: 50px!important;
+	height: 50px!important;
+	right: 8%!important;
+	transition: ease-in-out 0.2s;
+	&:hover{
+		transform: scale(1.1);
+		transition: ease-in-out 0.2s;
+	}
+	&:after{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		border: none;
+		width: 50px!important;
+		height: 50px!important;
+		font-size: 24px!important;
+		color: white;
+		content: '→'!important;
+		border-radius: 100%;
+		background-color: var(--bg-arrows);
+
+	}
+
+}
 
 .swiper-slide img {
 	display: block;
@@ -48,6 +113,7 @@ body {
 }
 .slide_description{
 	position: absolute;
+	z-index: 20;
 	inset: 0;
 	width: 100%;
 	height: 100%;
@@ -57,23 +123,24 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		width: 75%;
-		height: 80%;
+		height: 75%;
 		margin: auto;
 
 		.slide_description_title{
-
+			width: 33%;
 			height: 100%;
 			display: grid;
-			justify-content: end;
+			justify-content: start;
 			align-items: end;
+			margin-bottom: 57px;
 			p{
-
-				font-family: 'BenzinExtraBold', BenzinMedium, sans-serif;
+				padding: 10px 0 0 0;
+				margin: 0;
+				font-family: 'BenzinExtraBold', sans-serif;
 				font-weight: 900; /* Чітко вказуємо */
 				text-transform: uppercase;
 				font-size: 40px;
 				text-align: start;
-
 
 				/* Покращення рендерингу */
 				-webkit-font-smoothing: antialiased;
@@ -82,33 +149,74 @@ body {
 			}
 		}
 		.slide_description_subTitle{
+			width: 33%;
 			height: 100%;
 			display: flex;
+			justify-content: end;
 			align-items: end;
+			margin-bottom: 57px;
 			p{
-				font: normal normal normal 30px/40px 'Benzin-regular';
-				font-family: 'Benzin-regular';
+				margin: 0;
+				padding: 0;
+				font-family: 'BenzinRegular',sans-serif;
+				color: white;
+				font-weight: 400;
 				font-size: 38px;
 			}
 		}
 		.slide_description_button{
+			width: 33%;
 			height: 100%;
 			display: flex;
+			justify-content: center;
 			align-items: end;
 
-			&:hover{
 
-			}
-			a{
+			a {
+				position: relative;
+				overflow: hidden;
+				display: inline-block;
+				text-align: start;
 				font-family: 'BenzinMedium', sans-serif;
+				font-weight: 800;
 				text-transform: uppercase;
 				text-decoration: none;
-				letter-spacing: 10%;
 				color: white;
+				width: 170px;
 				font-size: 12px;
 				padding: 10px 20px;
+				margin-left: 0;
 				background-color: var(--color-orange);
+				transition: all 0.8s ease-in-out;
+				white-space: nowrap;
+
+				// стрілка як абсолютно позиціонований елемент
+				span {
+					position: absolute;
+					right: 15px;
+					padding: 10px 20px;
+					top: 50%;
+					transform: translateX(110%) translateY(-50%);
+					opacity: 0;
+					font-weight: 500;
+					font-size: 24px;
+					transition: all 0.5s ease-in-out;
+					pointer-events: none;
+				}
+
+				&:hover {
+					background-color: #df2626;
+					width: 190px;
+					margin-left: -15px;
+					transition: all 0.8s ease-in-out;
+
+					span {
+						transform: translateX(40%) translateY(-50%);
+						opacity: 1;
+					}
+				}
 			}
+
 		}
 	}
 }

@@ -9,14 +9,34 @@
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 	/>
-
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
 <main>
 	<div class="swiperSection">
 		<div class="swiper mySwiper">
 			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="slide_img">
+						<img src="/images/swiper-title/swiperTitleBg.svg" alt="">
+					</div>
+					<div class="slide_description">
+						<div class="slide_description_container">
+							<div class="slide_description_title">
+								<div class="group_title">
+									<p class="text-orange">Швидка <br> доставка</p>
+									<p>вантажів <br>	із Китаю</p>
+								</div>
+							</div>
+							<div class="slide_description_button">
+								<a class="bg_orange" href="#">замовити консультацію <span>→</span></a>
+							</div>
+							<div class="slide_description_subTitle">
+								<p>Авіаперевезення <br>
+									всього за 14 днів</p>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="swiper-slide">
 					<div class="slide_img">
 						<img src="/images/swiper-title/swiperTitleBg.svg" alt="">
@@ -39,14 +59,28 @@
 						</div>
 					</div>
 				</div>
-				<div class="swiper-slide">Slide 2</div>
-				<div class="swiper-slide">Slide 3</div>
-				<div class="swiper-slide">Slide 4</div>
-				<div class="swiper-slide">Slide 5</div>
-				<div class="swiper-slide">Slide 6</div>
-				<div class="swiper-slide">Slide 7</div>
-				<div class="swiper-slide">Slide 8</div>
-				<div class="swiper-slide">Slide 9</div>
+				<div class="swiper-slide">
+					<div class="slide_img">
+						<img src="/images/swiper-title/swiperTitleBg.svg" alt="">
+					</div>
+					<div class="slide_description">
+						<div class="slide_description_container">
+							<div class="slide_description_title">
+								<div class="group_title">
+									<p class="text-orange">Швидка <br> доставка</p>
+									<p>вантажів <br>	із Китаю</p>
+								</div>
+							</div>
+							<div class="slide_description_button">
+								<a class="bg_orange" href="#">замовити консультацію</a>
+							</div>
+							<div class="slide_description_subTitle">
+								<p>Авіаперевезення <br>
+									всього за 14 днів</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
@@ -65,10 +99,12 @@
 			prevEl: ".swiper-button-prev",
 		},
 		pagination: {
+			clickable: true,
 			el: ".swiper-pagination",
 		},
 		mousewheel: true,
 		keyboard: true,
+
 	});
 </script>
 </body>
