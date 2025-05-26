@@ -9,7 +9,8 @@
 }
 body{
 	margin: 0!important;
-	background: var(--main-bg-color);
+	background-color: var(--body-color)!important;
+	overflow-x: hidden;
 }
 .text-orange{
 	color: var(--color-orange);
@@ -29,16 +30,20 @@ body{
 main{
 	width: 100vw;
 	margin: auto;
-	background-color: white;
+	//background-color: white;
 	min-height: 100vh;
 }
 .container{
 	max-width: 1410px;
 	margin: auto;
 }
-
+main{
+	width: 100vw;
+	overflow: hidden;
+	padding: 0;
+}
 .container_xl{
-	padding: 0 10px;
+	padding: 0 30px;
 	position: relative;
 	max-width: 1700px;
 
