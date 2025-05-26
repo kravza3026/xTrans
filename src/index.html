@@ -8,23 +8,49 @@
 	<link rel="stylesheet" href="css/main.css" rel="stylesheet">
 <!--	<link rel="stylesheet" href="css/pages.min.css" rel="stylesheet">-->
 
-
+	<style>
+		.navigation{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.navigation > div {
+			flex: 1 0 calc(33.333% - 123.34px);
+			background-size: cover;
+			position: relative;
+		}
+		a{
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff!important;
+		}
+		.titleSection{
+			font-family: BenzinExtraBold;
+			font-size: 36px;
+			text-align: center;
+			padding: 100px 0;
+			margin: 0;
+			color: var(--color-orange);
+		}
+	</style>
 </head>
 
 <body>
 
 
 	<main class="main">
+		<p class="titleSection">Sections</p>
 		<div class="navigation">
-			<div>
-				<a href="./swiper-title.html">Swiper title section</a>
+			<div style="background-image: url('images/homepage/swiperTitle.png')">
+				<a target="_blank" href="./swiper-title.html"></a>
 			</div>
-			<div>
-				<a href="./advantages_section.html">advantages</a>
+			<div style="background-image: url('images/homepage/adventages.png')">
+				<a target="_blank" href="./advantages_section.html"></a>
 			</div>
-			<div>
-				<a href="#">Swiper title section</a>
-			</div>
+
 		</div>
 	</main>
 
