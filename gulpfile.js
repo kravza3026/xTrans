@@ -51,7 +51,7 @@ const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML,
 /**
  * Основные задачи
  * */
-const mainTasks = gulp.series(fonts, devTasks);
+const mainTasks = gulp.series( devTasks);
 
 /**
  * Построение сценариев выполнения задач

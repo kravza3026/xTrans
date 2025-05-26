@@ -1,41 +1,6 @@
-@font-face {
-	font-family: BenzinBold;
-	font-display: swap;
-	src: url("../fonts/BenzinBold.woff2") format("woff2");
-	font-weight: 400 800 ;
-	font-style: normal;
-}
 
-@font-face {
-	font-family: BenzinExtraBold;
-	font-display: swap;
-	src: url("../fonts/BenzinExtraBold.woff2") format("woff2");
-	font-style: normal;
-}
 
-@font-face {
-	font-family: BenzinMedium;
-	font-display: swap;
-	src: url("../fonts/BenzinMedium.woff2") format("woff2");
-	font-weight: 400 800;
-	font-style: normal;
-}
 
-@font-face {
-	font-family: BenzinRegular;
-	font-display: swap;
-	src: url("../fonts/BenzinRegular.woff2") format("woff2");
-	font-weight: 400 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: BenzinSemibold;
-	font-display: swap;
-	src: url("../fonts/BenzinSemibold.woff2") format("woff2");
-	font-weight: 400 800;
-	font-style: normal;
-}
 *{
 
 	p, li{
@@ -52,16 +17,36 @@ body{
 .bg-orange{
 	background-color: var(--color-orange);
 }
+.text-white{
+	color: var(--main-white);
+}
+.text-orange{
+	color: var(--color-orange);
+}
+.uppercase{
+	text-transform: uppercase;
+}
 main{
 	width: 100vw;
 	margin: auto;
-	background-color: #1E1F22;
+	background-color: white;
 	min-height: 100vh;
 }
 .container{
 	max-width: 1410px;
 	margin: auto;
 }
+
+.container_xl{
+	padding: 0 10px;
+	position: relative;
+	max-width: 1700px;
+
+	@media screen and (max-width: 1440px) {
+		padding: 0 15px;
+	}
+}
+
 .navigation{
 	margin:0 25px;
 	padding-top: 25px;
@@ -73,7 +58,7 @@ main{
 		border-radius: 8px;
 		width: 30vw;
 		height: 10vw;
-		background-color: white;
+		background-color: transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -83,7 +68,7 @@ main{
 		&:hover{
 
 			transition: ease-in-out 0.2s;
-			box-shadow: 1px -1px 35px -1px rgba(255,77,41,0.75);
+			box-shadow: 1px -1px 10px -1px rgba(236, 222, 220, 0.75);
 		}
 		a{
 			color: #1E1F22;
@@ -92,3 +77,112 @@ main{
 	}
 }
 
+
+.swiper-wrapper{
+	position: relative;
+	//min-height: 541px;
+}
+.swiper {
+	width: 100%;
+	height: 100%;
+	//min-height: 541px;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%!important;
+	min-height: 100%!important;
+
+}
+.swiper-pagination-bullet{
+	border: 1px solid #737373;
+	background-color: #1A1B1D;
+	width: 9px!important;
+	height: 9px!important;
+	opacity: 1!important;
+	margin: 0 5px!important;
+}
+.swiper-pagination{
+	bottom: 10px!important;
+}
+.swiper-pagination-bullet-active{
+	border: 1px solid var(--color-orange);
+	background-color: var(--color-orange)!important;
+	transition: ease-in-out 0.2s;
+	width: 13px!important;
+	height: 13px!important;
+}
+.swiper-button-prev{
+	width: 50px!important;
+	height: 50px!important;
+	left: 8%!important;
+	transition: ease-in-out 0.2s;
+
+	@media screen and (max-width: 768px) {
+		display: none!important;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1600px) {
+		left: 1%!important;
+		display: none!important;
+	}
+	&:hover{
+		transform: scale(1.1);
+		transition: ease-in-out 0.2s;
+	}
+	&:after{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		border: none;
+		width: 50px!important;
+		height: 50px!important;
+		font-size: 24px!important;
+		color: white;
+		content: url("../images/icons/slide-prev.svg")!important;
+		border-radius: 100%;
+		background-color: var(--bg-arrows);
+		line-height: 0!important;
+	}
+
+}
+.swiper-button-next{
+	width: 50px!important;
+	height: 50px!important;
+	right: 8%!important;
+	transition: ease-in-out 0.2s;
+
+	@media screen and (max-width: 768px) {
+		display: none!important;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1600px) {
+		right: 1%!important;
+		display: none!important;
+	}
+	&:hover{
+		transform: scale(1.1);
+		transition: ease-in-out 0.2s;
+	}
+	&:after{
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		border: none;
+		width: 50px!important;
+		height: 50px!important;
+		font-size: 24px!important;
+		color: white;
+		content: url("../images/icons/slide-next.svg")!important;
+		border-radius: 100%;
+		background-color: var(--bg-arrows);
+		line-height: 0!important;
+
+	}
+
+}
