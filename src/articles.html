@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сторінка 1</title>
+	<link rel="stylesheet" href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/articles.css" rel="stylesheet">
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+	/>
+</head>
+<body>
+<main>
+	<div class="swiperSection ">
+		<h2 class="swiperTitle">корисні <span class="text-orange">статті</span></h2>
+		<div class="swiper mySwiper  articlesSwiper">
+		<div class="swiper-button-prev"></div>
+			<div class="swiper-wrapper container">
+				<div class="swiper-slide " >
+					<div class="slide_container">
+						<div class="slide_img">
+							<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+						</div>
+						<div class="slide_date">
+							<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+							<span>12.02/2025</span>
+						</div>
+						<div class="slide_info">
+							<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+						</div>
+						<div class="slide_link">
+							<a href="#" >читати статтю</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide " >
+					<div class="slide_container">
+						<div class="slide_img">
+							<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+						</div>
+						<div class="slide_date">
+							<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+							<span>12.02/2025</span>
+						</div>
+						<div class="slide_info">
+							<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+						</div>
+						<div class="slide_link">
+							<a href="#" >читати статтю</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide " >
+					<div class="slide_container">
+						<div class="slide_img">
+							<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+						</div>
+						<div class="slide_date">
+							<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+							<span>12.02/2025</span>
+						</div>
+						<div class="slide_info">
+							<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+						</div>
+						<div class="slide_link">
+							<a href="#" >читати статтю</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide " >
+					<div class="slide_container">
+						<div class="slide_img">
+							<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+						</div>
+						<div class="slide_date">
+							<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+							<span>12.02/2025</span>
+						</div>
+						<div class="slide_info">
+							<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+						</div>
+						<div class="slide_link">
+							<a href="#" >читати статтю</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide " >
+					<div class="slide_container">
+						<div class="slide_img">
+							<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+						</div>
+						<div class="slide_date">
+							<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+							<span>12.02/2025</span>
+						</div>
+						<div class="slide_info">
+							<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+						</div>
+						<div class="slide_link">
+							<a href="#" >читати статтю</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="swiper-scrollbar"></div>
+			<div class="swiper-button-next"></div>
+
+
+		</div>
+
+	</div>
+	<div class="swiper-pagination"></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+
+
+	var swiper = new Swiper(".mySwiper", {
+		cssMode: true,
+		spaceBetween: 30,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				pagination: {
+					clickable: true,
+					el: ".swiper-pagination",
+				},
+			},
+			768: {
+				slidesPerView: 3,
+			},
+		},
+
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+
+
+		mousewheel: true,
+		keyboard: true,
+		freeMode: true,
+
+
+
+
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+.swiperSection{
+	padding: 15px!important;
+}
+.swiper-pagination{
+
+	position: relative!important;
+}
+.container{
+	max-width: 1433px;
+	background-color: var(--second-bg-color);
+
+
+}
+.swiperTitle{
+	text-align: center;
+	font-family: 'BenzinExtraBold', sans-serif;
+	text-transform: uppercase;
+	font-size: 68px;
+	color: var(--main-white);
+	letter-spacing: 2px;
+	margin: 10px;
+	@media screen and (max-width: 768px) {
+		max-width: 90%;
+		margin: auto;
+		font-size: 32px;
+	}
+}
+.articlesSwiper{
+
+
+
+	.swiper-scrollbar{
+
+		display: none;
+		opacity: 1!important;
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+	}
+	.swiper-scrollbar-drag{
+		background-color: var(--color-orange);
+		display: block;
+	}
+	.slide_img{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 407px;
+		object-fit: cover;
+		object-position: center;
+
+		@media screen and (max-width: 768px) {
+			max-width: 100%;
+		}
+		img{
+			max-width: 100%;
+			max-height: 200px;
+			margin: auto;
+
+			@media screen and (max-width: 768px) {
+				max-width: 100%;
+			}
+		}
+	}
+	.swiper-slide{
+		border: 1px solid var(--main-bg-color);
+		max-width: 30%;
+		width: 25%;
+		margin: 20px;
+		flex-shrink: 0 !important;
+		padding: 0;
+		background-color: var(--lazy-dark-color);
+			@media screen and (max-width: 768px) {
+				margin:20px auto;
+				width: 100%;
+				max-width: 95%;
+
+			}
+		:hover{
+			.slide_description_button{
+				display: flex;
+			}
+			.slide_description_text{
+				display: none;
+			}
+		}
+	}
+	.slide_date{
+		width: fit-content;
+		margin: 16px 0;
+		padding: 6px;
+		font-family: 'BenzinRegular', sans-serif;
+		font-size: 12px;
+		line-height: 150%;
+		display: flex;
+		gap: 6px;
+		align-items: center;
+		color: var(--text-grey);
+		background-color: var(--dark-bg-color);
+	}
+	.slide_container{
+		background-color: var(--lazy-dark-color);
+		text-align: start;
+		padding: 10px;
+		min-height: 362px;
+		max-width: 407px;
+		:nth-child(2){
+			padding-top: 6px;
+		}
+		span{
+			height: 19px;
+		}
+
+		@media screen and (max-width: 768px) {
+			max-width: 100%;
+			margin: auto;
+		}
+	}
+	.slide_info{
+		color: var(--main-white);
+		font-family: 'BenzinSemibold', sans-serif;
+		font-size: 16px;
+
+	}
+	.slide_link{
+		a{
+			font-family: 'BenzinMedium' , sans-serif;
+			color: var(--color-orange);
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 1.1px;
+		}
+	}
+
+}

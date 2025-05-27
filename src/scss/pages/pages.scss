@@ -5,6 +5,8 @@
 
 	p, li{
 		color: var(--main-white);
+		margin: 0;
+		padding: 0;
 	}
 }
 body{
@@ -36,6 +38,13 @@ main{
 .container{
 	max-width: 1410px;
 	margin: auto;
+	position: relative;
+
+	@media screen and (max-width: 1440px) {
+		max-width: 100%;
+		padding: 0 7px;
+	}
+
 }
 main{
 	width: 100vw;
@@ -46,6 +55,7 @@ main{
 	padding: 0 30px;
 	position: relative;
 	max-width: 1700px;
+	margin: auto;
 
 	@media screen and (max-width: 1440px) {
 		padding: 0 15px;
@@ -82,6 +92,26 @@ main{
 	}
 }
 
+.section_title{
+	font-family: 'BenzinExtraBold', sans-serif;
+	font-size:40px;
+	color: var(--main-white);
+	line-height: 68px;
+	text-transform: uppercase;
+
+	@media screen and (max-width: 768px) {
+		font-size: 26px;
+		max-width: 70%;
+
+		line-height: 32px;
+		letter-spacing: 1px;
+		padding:15px 0;
+
+	}
+	span{
+		color: var(--color-orange);
+	}
+}
 
 .swiper-wrapper{
 	position: relative;

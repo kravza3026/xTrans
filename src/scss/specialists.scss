@@ -1,0 +1,53 @@
+
+.specialists_section{
+	padding: 10px;
+
+	.specialists_list_container{
+		background-color: var(--second-bg-color);
+		width: 100%;
+		padding: 25px;
+		display: flex;
+		@media screen and (max-width: 768px) {
+			width: 90%;
+			padding: 15px;
+		}
+		.specialists_list_items{
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			gap: 20px;
+			justify-content: space-between;
+			overflow: scroll;
+			scrollbar-color: var(--color-orange) var(--main-bg-color);
+			scrollbar-width: unset;
+
+			@media screen and (max-width: 768px) {
+				gap: 10px;
+			}
+		}
+		.list_item{
+
+			display: grid;
+			justify-content: center;
+			border: 1px solid var(--main-bg-color);
+			padding: 25px;
+
+			@media screen and (max-width: 768px) {
+				padding: 10px;
+			}
+
+			.list_item_title{
+				font-family: 'BenzinExtraBold', sans-serif;
+				font-size: 16px;
+				display: flex;
+				align-items: start;
+				gap: 10px;
+				margin-top: 15px;
+				p{
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
