@@ -13,11 +13,14 @@
 </head>
 <body>
 <main>
+	<div class="">
 	<div class="swiperSection ">
 		<h2 class="swiperTitle">напрямки <span class="text-orange">перевезень</span></h2>
 		<div class="swiper mySwiper  directionsSwiper">
 		<div class="swiper-button-prev"></div>
-			<div class="swiper-wrapper container">
+			<div class="swiper_bg"></div>
+			<div class="swiper-wrapper ">
+
 				<div class="swiper-slide " >
 					<div class="slide_container">
 						<div class="slide_img">
@@ -314,6 +317,7 @@
 
 		</div>
 	</div>
+	</div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -324,7 +328,7 @@
 
 	var swiper = new Swiper(".mySwiper", {
 		cssMode: true,
-		spaceBetween: 20,
+		spaceBetween: 25,
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
@@ -345,7 +349,10 @@
 		},
 		mousewheel: true,
 		keyboard: true,
-		freeMode: true,
+		freeMode: false,
+		centeredSlides: false,
+
+
 
 
 

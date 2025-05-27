@@ -1,6 +1,12 @@
 .swiperSection{
 	padding: 15px!important;
 }
+.swiper-button-next{
+	right: 0!important;
+}
+.swiper-button-prev{
+	left: 0!important;
+}
 .swiper-pagination{
 
 	position: relative!important;
@@ -11,6 +17,31 @@
 
 
 }
+.swiper-wrapper{
+	max-width: 1450px!important;
+	margin: auto;
+	position: relative;
+	padding: 30px 0;
+
+	@media screen and (max-width: 768px) {
+		max-width: 95%!important;
+		padding: 0;
+	}
+}
+.swiper_bg{
+	width: 92%;
+	height: 120%;
+	margin: auto;
+	inset: 20px;
+	background-color: var(--second-bg-color);
+	position: absolute;
+	z-index: -1;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		inset: 0;
+	}
+}
+
 .swiperTitle{
 	text-align: center;
 	font-family: 'BenzinExtraBold', sans-serif;
@@ -20,9 +51,10 @@
 	letter-spacing: 2px;
 	margin: 10px;
 	@media screen and (max-width: 768px) {
-		max-width: 90%;
-		margin: auto;
-		font-size: 32px;
+		max-width: 100%;
+		margin: 10px auto;
+		font-size: 26px;
+
 	}
 }
 .articlesSwiper{
@@ -64,16 +96,16 @@
 	}
 	.swiper-slide{
 		border: 1px solid var(--main-bg-color);
-		max-width: 30%;
-		width: 25%;
-		margin: 20px;
-		flex-shrink: 0 !important;
-		padding: 0;
+		//max-width: 30%;
+		//width: 25%;
+		//margin: 20px;
+		max-width: calc(33.33% - 22px);
+
 		background-color: var(--lazy-dark-color);
 			@media screen and (max-width: 768px) {
-				margin:20px auto;
+				margin:10px auto;
 				width: 100%;
-				max-width: 95%;
+				max-width: 99%;
 
 			}
 		:hover{

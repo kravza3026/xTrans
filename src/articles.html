@@ -17,7 +17,9 @@
 		<h2 class="swiperTitle">корисні <span class="text-orange">статті</span></h2>
 		<div class="swiper mySwiper  articlesSwiper">
 		<div class="swiper-button-prev"></div>
-			<div class="swiper-wrapper container">
+			<div class="swiper_bg"></div>
+			<div class="swiper-wrapper ">
+
 				<div class="swiper-slide " >
 					<div class="slide_container">
 						<div class="slide_img">
@@ -123,7 +125,7 @@
 
 	var swiper = new Swiper(".mySwiper", {
 		cssMode: true,
-		spaceBetween: 30,
+		spaceBetween: 50,
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
@@ -145,7 +147,7 @@
 
 		mousewheel: true,
 		keyboard: true,
-		freeMode: true,
+		freeMode: false,
 
 
 

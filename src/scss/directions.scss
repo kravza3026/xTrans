@@ -1,7 +1,15 @@
 .swiperSection{
-	padding: 15px!important;
+	padding: 75px!important;
+	@media screen and (max-width: 768px) {
+		padding: 15px!important;
+	}
 }
-
+.swiper-button-next{
+	right: 0!important;
+}
+.swiper-button-prev{
+	left: 0!important;
+}
 .container{
 	max-width: 1433px;
 	background-color: var(--second-bg-color);
@@ -24,7 +32,9 @@
 .directionsSwiper{
 
 
-
+	.swiper{
+		width: 100% !important;
+	}
 	.swiper-scrollbar{
 
 		display: none;
@@ -52,13 +62,33 @@
 			margin: auto;
 		}
 	}
+	.swiper-wrapper{
+		max-width: 1450px!important;
+		margin: auto;
+		position: relative;
+		padding: 30px 0;
+
+		@media screen and (max-width: 768px) {
+			max-width: 95%!important;
+		}
+	}
+	.swiper_bg{
+		width: 92%;
+		height: 120%;
+		margin: auto;
+		inset: 20px;
+		background-color: var(--second-bg-color);
+		position: absolute;
+		z-index: -1;
+		@media screen and (max-width: 768px) {
+		width: 100%;
+			inset: 0;
+		}
+	}
 	.swiper-slide{
 		border: 1px solid var(--main-bg-color);
-		max-width: 314px;
-		width: 25%;
-		margin: 20px;
-		flex-shrink: 0 !important;
-		padding: 0;
+		//max-width: 314px;
+		max-width: calc(25% - 22px);
 		background-color: var(--lazy-dark-color);
 			@media screen and (max-width: 768px) {
 				margin:20px 10px;
