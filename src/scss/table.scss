@@ -1,0 +1,119 @@
+table.darkTable {
+	display: none;
+	border: 2px solid var(--border-color);
+	background-color: #1F2023;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	border-collapse: collapse;
+}
+table.darkTable td, table.darkTable th {
+	border: none;
+	padding: 3px 2px;
+	color: var(--gray-text);
+	font-family: 'BenzinRegular',sans-serif;
+	font-size: 13px;
+}
+table.darkTable tbody td {
+	font-size: 13px;
+	color: #E6E6E6;
+	height: 50px;
+
+}
+table.darkTable tr:nth-child(even) {
+	background: var(--second-bg-color);
+}
+table.darkTable thead {
+	background: var(--second-bg-color);
+
+}
+table.darkTable thead th {
+	height: 70px;
+	width: 30%;
+	color: var(--table-head);
+	font-family: 'BenzinRegular',sans-serif;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+	border: none;
+
+}
+table.darkTable thead th:first-child {
+	border-left: none;
+}
+
+.table_items{
+	margin-top: 10px;
+	border: 1px solid var(--border-color);
+	display: flex;
+	flex-wrap: wrap;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+	.table_item:nth-child(odd){
+		background-color: var(--second-bg-color);
+	}
+	.table_header{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 20px;
+		font-family: 'BenzinRegular',sans-serif;
+		font-size: 14px;
+		text-align: start;
+		color: var(--text-grey);
+		text-transform: uppercase;
+		p{
+			width: 30%;
+			color: var(--text-grey);
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	.table_item{
+		display: flex;
+		flex: 1 1 100%;
+		justify-content: space-between;
+		width: 100%;
+		gap: 10px;
+		padding: 20px;
+		@media screen and (max-width: 768px) {
+			display: grid;
+			gap: 20px;
+			width: auto;
+		}
+		div{
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			width: 30%;
+
+			@media screen and (max-width: 768px) {
+				width: auto;
+			}
+			:first-child{
+				display: none;
+				font-family: 'BenzinRegular',sans-serif;
+				font-size: 14px;
+				color: var(--text-grey);
+				padding: 0;
+				margin: 0;
+				text-transform: uppercase;
+				@media screen and (max-width: 768px) {
+					display: block;
+				}
+			}
+			:last-child{
+				font-family: 'BenzinRegular',sans-serif;
+				font-size: 15px;
+				@media screen and (max-width: 768px) {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+}
+
+

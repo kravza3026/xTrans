@@ -1,0 +1,129 @@
+.handling_container{
+	background-color: var(--dark-bg-color);
+	position: relative;
+	@media screen and (max-width: 768px) {
+		min-height: 500px;
+	}
+
+	.bg_img{
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		text-align: center;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
+	.handling_content{
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 800px;
+		padding: 25px;
+		margin: 10px;
+		.handling_content_items_left{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 556px;
+			width: 45%;
+			:nth-child(1){
+				top: 10px;
+			}
+			:nth-child(2){
+				top: 40px;
+			}
+			:nth-child(3){
+				top: 110px;
+			}
+			.item{
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				position: relative;
+				border: 1px solid var(--border-color);
+				padding: 25px;
+				.item_number{
+					position: absolute;
+					color: var(--main-white);
+					width: 37px;
+					height: 37px;
+					border-radius: 50%;
+					background-color: var(--second-bg-color);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 12px;
+					font-family: "BenzinExtraBold", sans-serif;
+					font-weight: 400;
+					z-index: 1;
+					top: -15px;
+					right: -15px;
+				}
+				.item_title{
+					font-family: 'BenzinSemibold', sans-serif;
+					color: var(--main-white);
+					text-transform: uppercase;
+					font-size: 15px;
+				}
+			}
+		}
+		.handling_content_items_right{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 556px;
+			width: 45%;
+			:nth-child(1){
+				top: 130px;
+			}
+			:nth-child(2){
+				top: -40px;
+			}
+
+			.item{
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				position: relative;
+				border: 1px solid var(--border-color);
+				padding: 25px;
+				.item_number{
+					position: absolute;
+					color: var(--main-white);
+					width: 37px;
+					height: 37px;
+					border-radius: 50%;
+					background-color: var(--second-bg-color);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 12px;
+					font-family: "BenzinExtraBold", sans-serif;
+					font-weight: 400;
+					z-index: 1;
+					top: -15px;
+					left: -15px;
+				}
+				.item_title{
+					font-family: 'BenzinSemibold', sans-serif;
+					color: var(--main-white);
+					text-transform: uppercase;
+					font-size: 15px;
+				}
+			}
+		}
+
+
+	}
+
+}

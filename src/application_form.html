@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Сторінка 1</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/application_form.css">
+</head>
+<body>
+	<main>
+		<div class="application_section">
+			<div class="container">
+				<div class="application_section_container">
+
+					<div class="application_section_content">
+						<div class="application_title_container">
+							<h2 class="section_title">Форма заявки  <span>на викуп товару</span></h2>
+						</div>
+						<form class="application_form" action="">
+							<div class="group_input">
+								<div>
+									<label class="label" for="product_name">
+										<span>1</span><span>Назва товару</span>
+									</label>
+									<input id="product_name" name="product_name" type="text" placeholder="Введіть назву товару">
+								</div>
+								<div>
+									<label class="label" for="product_link">
+										<span>2</span><span>Посилання на товар</span>
+									</label>
+									<input id="product_link" name="product_link" type="text" placeholder="Посилання на товар">
+								</div>
+								<div class="input_mail">
+									<label class="label" for="date">
+										<span>3</span><span>Бажаний термін доставки</span>
+									</label>
+									<input type="text" id="date"
+										   placeholder="12.02.2025"
+										   onfocus="(this.type='date')"
+										   onblur="(this.type='text')">
+								</div>
+							</div>
+							<div class="group_input">
+								<div>
+									<label class="label" for="name">
+										<span>4</span><span>Ім’я*</span>
+									</label>
+									<input id="name" name="name" type="text" placeholder="Введіть ваше ім’я">
+								</div>
+								<div>
+									<label class="label" for="phone">
+										<span>5</span><span>номер Телефону*</span>
+									</label>
+									<input id="phone" name="phone" type="text" placeholder="Номер телефону">
+								</div>
+								<div class="input_mail">
+									<label class="label" for="email">
+										<span>6</span><span>E-mail*</span>
+									</label>
+									<input id="email" name="email" type="text" placeholder="Введіть вашу електронну пошту">
+								</div>
+							</div>
+
+
+
+							<div class="form_submit">
+								<div class="slide_description_button">
+									<div class="link_container">
+										<button type="submit">замовити </button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 		text-transform: uppercase;
 		@media screen and (max-width: 768px) {
 			font-size: 26px;
-			max-width: 50%;
+			max-width: 100%;
 			padding-left: 10px;
 		}
 	}
@@ -14,21 +14,36 @@
 	margin: 10px;
 	min-height: 700px;
 	position: relative;
-	border-bottom: 1px solid var(--border-color);
+	border: 1px solid var(--border-color);
 	background-color: var(--second-bg-color);
 	padding:50px;
+	@media screen and (max-width: 768px) {
+		padding: 20px;
+		min-height: auto;
+	}
 	.content_bg{
 		position: absolute;
 		right: 0;
 		justify-content: end;
 		bottom: -48px;
 
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+
 	}
 	.fags_container{
-		background-color: var(--dark-bg-color);
+
 		position: relative;
 		z-index: 1;
 		width: 60%;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		@media screen and (max-width: 768px) {
+			width: 100%;
+
+		}
 	}
 	/* Style the button that is used to open and close the collapsible content */
 	.collapsible {
@@ -61,11 +76,17 @@
 		padding: 10px;
 		font-family: 'BenzinExtraBold', sans-serif;
 		color: #313236;
+		@media screen and (max-width: 768px) {
+			font-size: 12px;
+		}
 	}
 	.faq_title{
 		width: 80%;
 		font-size: 16px;
 		font-family: 'BenzinSemibold', sans-serif;
+		@media screen and (max-width: 768px) {
+			font-size: 12px;
+		}
 	}
 	.fag_opened{
 		width: 47px;
@@ -84,18 +105,31 @@
 		margin: auto;
 	}
 	.faq_content_text{
+		ul{
+			margin: 0;
+			padding: 0;
+			display: grid;
+			gap: 15px 0;
+		}
 		li{
 			display: flex;
 			align-items: start;
 			gap: 5px;
 			list-style: none;
 
+			img{
+				width: 7px;
+				height: 7px;
+			}
 			p{
 				font-family: 'BenzinRegular', sans-serif;
 				font-size: 14px;
 				color: var(--text-grey);
 				margin: 0;
 				padding: 0;
+				@media screen and (max-width: 768px) {
+					font-size: 12px;
+				}
 				span{
 					color: var(--main-white);
 				}
