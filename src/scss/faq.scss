@@ -1,0 +1,106 @@
+.title_container{
+	position: relative;
+	.section_title{
+		text-transform: uppercase;
+		@media screen and (max-width: 768px) {
+			font-size: 26px;
+			max-width: 50%;
+			padding-left: 10px;
+		}
+	}
+
+}
+.content{
+	margin: 10px;
+	min-height: 700px;
+	position: relative;
+	border-bottom: 1px solid var(--border-color);
+	background-color: var(--second-bg-color);
+	padding:50px;
+	.content_bg{
+		position: absolute;
+		right: 0;
+		justify-content: end;
+		bottom: -48px;
+
+	}
+	.fags_container{
+		background-color: var(--dark-bg-color);
+		position: relative;
+		z-index: 1;
+		width: 60%;
+	}
+	/* Style the button that is used to open and close the collapsible content */
+	.collapsible {
+		color: var(--main-white);
+		background-color: var(--dark-bg-color);
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		font-size: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	.fag_item{
+		border: 1px solid var(--border-color);
+	}
+	/* Style the collapsible content. Note: hidden by default */
+	.faq_content {
+		width: 100%;
+		overflow: hidden;
+		height: 0;
+		transition: height 0.4s ease;
+		background-color: var(--dark-bg-color);
+	}
+	.fag_num{
+		font-size: 16px;
+		padding: 10px;
+		font-family: 'BenzinExtraBold', sans-serif;
+		color: #313236;
+	}
+	.faq_title{
+		width: 80%;
+		font-size: 16px;
+		font-family: 'BenzinSemibold', sans-serif;
+	}
+	.fag_opened{
+		width: 47px;
+		height: 47px;
+		border: 1px solid var(--color-orange);
+		color: var(--color-orange);
+		font-size: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: 'BenzinRegular', sans-serif;
+	}
+	.faq_content_text{
+		width: 80%;
+		padding: 20px 0;
+		margin: auto;
+	}
+	.faq_content_text{
+		li{
+			display: flex;
+			align-items: start;
+			gap: 5px;
+			list-style: none;
+
+			p{
+				font-family: 'BenzinRegular', sans-serif;
+				font-size: 14px;
+				color: var(--text-grey);
+				margin: 0;
+				padding: 0;
+				span{
+					color: var(--main-white);
+				}
+			}
+		}
+	}
+
+}

@@ -39,7 +39,7 @@
 
 		display: none;
 		opacity: 1!important;
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1450px) {
 			display: block;
 		}
 	}
@@ -63,11 +63,14 @@
 		}
 	}
 	.swiper-wrapper{
-		max-width: 1450px!important;
+		max-width: 90%!important;
 		margin: auto;
 		position: relative;
 		padding: 30px 0;
 
+		@media screen and (max-width: 1450px) {
+			max-width: 98%!important;
+		}
 		@media screen and (max-width: 768px) {
 			max-width: 95%!important;
 		}
@@ -80,7 +83,7 @@
 		background-color: var(--second-bg-color);
 		position: absolute;
 		z-index: -1;
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1450px) {
 		width: 100%;
 			inset: 0;
 		}
@@ -88,7 +91,7 @@
 	.swiper-slide{
 		border: 1px solid var(--main-bg-color);
 		//max-width: 314px;
-		max-width: calc(25% - 22px);
+
 		background-color: var(--lazy-dark-color);
 			@media screen and (max-width: 768px) {
 				margin:20px 10px;

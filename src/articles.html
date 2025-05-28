@@ -15,7 +15,7 @@
 <main>
 	<div class="swiperSection ">
 		<h2 class="swiperTitle">корисні <span class="text-orange">статті</span></h2>
-		<div class="swiper mySwiper  articlesSwiper">
+		<div class="swiper mySwiper container_xl articlesSwiper">
 		<div class="swiper-button-prev"></div>
 			<div class="swiper_bg"></div>
 			<div class="swiper-wrapper ">
@@ -125,7 +125,7 @@
 
 	var swiper = new Swiper(".mySwiper", {
 		cssMode: true,
-		spaceBetween: 50,
+		spaceBetween: 60,
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
@@ -135,8 +135,17 @@
 				},
 			},
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
+				pagination: {
+					clickable: true,
+					el: ".swiper-pagination",
+				},
 			},
+			1200: {
+				slidesPerView:3
+			}
+
+
 		},
 
 		navigation: {

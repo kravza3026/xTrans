@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Сторінка 1</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="content">
+				<div class="title_container">
+					<h2 class="section_title">Часті <span>запитання</span></h2>
+				</div>
+				<div class="content_bg">
+					<img src="images/faq/men_bg.svg" alt="bg_section">
+				</div>
+				<div class="fags_container">
+					<div class="fag_item">
+						<div class="collapsible">
+							<div class="fag_num">01</div>
+							<div class="faq_title"><span>Які документи потрібні для морських перевезень?</span></div>
+							<div class="fag_opened">+</div>
+						</div>
+						<div class="faq_content">
+							<div class="faq_content_text">
+								<ul>
+									<li>
+										<span>
+											<img src="images/faq/up-left-arrow.svg" width="7" height="7" alt="arrow">
+										</span>
+										<p>
+											<span>Коносамент (Bill of Lading, B/L)</span> - підтверджує прийняття вантажу до перевезення та право власності на нього.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<script>
+		const items = document.querySelectorAll('.fag_item');
+
+		items.forEach((item) => {
+			const button = item.querySelector('.collapsible');
+			const content = item.querySelector('.faq_content');
+			const toggleIcon = item.querySelector('.fag_opened');
+
+			button.addEventListener('click', () => {
+				const isActive = item.classList.contains('active');
+
+				// Закриваємо всі інші
+				document.querySelectorAll('.fag_item.active').forEach((activeItem) => {
+					if (activeItem !== item) {
+						activeItem.classList.remove('active');
+						const activeContent = activeItem.querySelector('.faq_content');
+						const activeIcon = activeItem.querySelector('.fag_opened');
+						activeContent.style.height = activeContent.scrollHeight + 'px';
+						requestAnimationFrame(() => {
+							activeContent.style.height = '0px';
+						});
+						activeIcon.textContent = '+';
+					}
+				});
+
+				if (!isActive) {
+					item.classList.add('active');
+					content.style.height = content.scrollHeight + 'px';
+					toggleIcon.textContent = '–';
+
+					content.addEventListener('transitionend', function handler() {
+						content.style.height = 'auto';
+						content.removeEventListener('transitionend', handler);
+					});
+				} else {
+					item.classList.remove('active');
+					content.style.height = content.scrollHeight + 'px';
+					requestAnimationFrame(() => {
+						content.style.height = '0px';
+					});
+					toggleIcon.textContent = '+';
+				}
+			});
+		});
+	</script>
+
+
+
+
+</body>
+</html>
