@@ -3,29 +3,49 @@
 	margin: 50px 0;
 	background-color: var(--dark-bg-color);
 	border: 1px solid var(--main-bg-color);
+
 	.section_bg{
 		position: absolute;
 		z-index: 1;
 		inset: 0;
-		padding: 1px;
+		padding: 2px;
 		display: flex;
 		justify-content: center;
+		margin: auto;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+			@media screen and (max-width: 768px) {
+				width: 95%;
+				height: 95%;
+			}
+		}
 	}
 	.section_content{
 		position: relative;
 		padding: 50px;
 		z-index: 2;
 		inset: 0;
+		@media screen and (max-width: 768px) {
+			padding: 20px;
+		}
 	}
 	.vacancy_title{
 		font-family: 'BenzinRegular', sans-serif;
 		font-size: 24px;
 		color: var(--color-orange);
+		@media screen and (max-width: 768px) {
+			font-size: 18px;
+		}
 	}
 	.section_content_items{
 		display: flex;
 		justify-content: space-between;
-
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
 		.section_content_title{
 			display: flex;
 			align-items: center;
@@ -34,6 +54,10 @@
 			font-family: 'BenzinExtraBold', sans-serif;
 			font-size: 50px;
 			text-transform: uppercase;
+			@media screen and (max-width: 768px) {
+				font-size: 22px;
+				margin: 10px 0;
+			}
 		}
 
 		.section_content_text{
@@ -41,6 +65,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+			@media screen and (max-width: 768px) {
+				max-width: 100%;
+				text-align: start;
+			}
 			.text_item{
 				display: flex;
 				gap: 10px;
@@ -65,7 +93,7 @@
 
 
 		@media screen and (max-width: 768px) {
-			width: 40vw;
+			width: 80%;
 			margin-left: 0;
 		}
 
@@ -128,26 +156,131 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 50px;
+	margin-bottom: 50px;
 	background-color: var(--dark-bg-color);
 	border-bottom: 1px solid var(--main-bg-color);
 	border-top: 1px solid var(--main-bg-color);
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px;
+
+	}
 	.base_info_item{
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
 		width: 45%;
 		text-align: start;
+
+		@media screen and (max-width: 768px) {
+			flex-direction: row;
+			width: 100%;
+			justify-content: space-between;
+
+		}
 		.item_title{
 			font-family: 'BenzinExtraBold', sans-serif;
 			font-size: 14px;
 			color: var(--main-white);
 			text-transform: uppercase;
+			@media screen and (max-width: 768px) {
+				font-size: 14px;
+				width: 50%;
+			}
 		}
 		.item_text{
 			font-family: 'BenzinRegular', sans-serif;
 			font-size: 20px;
 			color: var(--text-grey);
+			@media screen and (max-width: 768px) {
+				font-size: 16px;
+			}
 		}
 	}
 
+}
+.vacancy_description_section{
+
+	.section_container{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+		justify-content: space-between;
+		padding: 50px;
+		background-color: var(--dark-bg-color);
+
+		@media screen and (max-width: 768px) {
+			padding: 10px;
+			gap: 20px;
+		}
+
+		.responsibilities, .proposition{
+			background-color: var(--lazy-dark-color);
+			border: 1px solid var(--border-color);
+			padding: 20px;
+			flex: 1 1 calc(45% - 10px);
+			position: relative;
+			.vertical_line{
+				left: 38px;
+				bottom: 50px;
+				width: 1px;
+				height: 60%;
+				background-color: var(--main-white);
+				position: absolute;
+				@media screen and (max-width: 768px) {
+					bottom: 50px;
+				}
+			}
+			.list_item_title{
+				margin-left: 12%;
+				text-transform: uppercase;
+				font-family: 'BenzinExtraBold', sans-serif;
+				font-size: 18px;
+				@media screen and (max-width: 768px) {
+					font-size: 12px;
+					margin-left: 25%;
+
+				}
+			}
+			.list_item{
+
+				position: relative;
+				z-index: 10;
+				display: flex;
+				margin: 20px 0;
+				align-items: end;
+				justify-content: space-between;
+				gap: 10px;
+				.list_item_number{
+					background-color: var(--color-orange);
+					color: var(--color-white);
+					font-family: 'BenzinExtraBold', sans-serif;
+					font-size: 14px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					margin-bottom: 10px;
+
+
+				}
+				.list_item_text{
+					border: 1px solid var(--border-color);
+					padding: 20px;
+					width: 85%;
+					font-family: 'BenzinRegular', sans-serif;
+					font-size: 14px;
+					color: var(--text-grey);
+					background-color: var(--dark-bg-color);
+					@media screen and (max-width: 768px) {
+						width: 70%;
+					}
+
+				}
+			}
+		}
+	}
 }
