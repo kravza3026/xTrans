@@ -1,0 +1,153 @@
+.finance_page_base{
+	position: relative;
+	margin: 50px 0;
+	background-color: var(--dark-bg-color);
+	border: 1px solid var(--main-bg-color);
+	.section_bg{
+		position: absolute;
+		z-index: 1;
+		inset: 0;
+		padding: 1px;
+		display: flex;
+		justify-content: center;
+	}
+	.section_content{
+		position: relative;
+		padding: 50px;
+		z-index: 2;
+		inset: 0;
+	}
+	.vacancy_title{
+		font-family: 'BenzinRegular', sans-serif;
+		font-size: 24px;
+		color: var(--color-orange);
+	}
+	.section_content_items{
+		display: flex;
+		justify-content: space-between;
+
+		.section_content_title{
+			display: flex;
+			align-items: center;
+		}
+		.vacancy_name{
+			font-family: 'BenzinExtraBold', sans-serif;
+			font-size: 50px;
+			text-transform: uppercase;
+		}
+
+		.section_content_text{
+			max-width: 45%;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.text_item{
+				display: flex;
+				gap: 10px;
+				align-items: start;
+				color: var(--text-grey);
+				font-family: 'BenzinRegular', sans-serif;
+				font-size: 14px;
+				margin-bottom: 10px;
+				img{
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+	}
+	.finance_btn {
+		width: 30vw;
+		display: flex;
+		justify-content: start;
+		align-items: flex-end;
+
+
+		@media screen and (max-width: 768px) {
+			width: 40vw;
+			margin-left: 0;
+		}
+
+		.link_container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			width: 282px;
+			height: 57px;
+			background-color: var(--color-orange);
+			font-family: 'BenzinMedium';
+			font-weight: 400;
+			text-align: center;
+			transition: all 0.8s ease-in-out;
+
+			@media screen and (max-width: 768px) {
+				width: 90%;
+				margin: auto;
+			}
+
+			&:hover {
+				background-color: var(--color-orange-hover);
+				width: 320px;
+				transition: all 0.8s ease-in-out;
+
+				a::after {
+					transform: translateX(50%);
+					opacity: 1;
+				}
+			}
+
+			a {
+				width: 100%;
+				color: var(--color-white);
+				font-size: 12px;
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: all 0.8s ease-in-out;
+				text-align: center;
+				white-space: nowrap;
+
+				&::after {
+					content: url("../images/icons/arrow.svg");
+					position: absolute;
+					transform: translateX(100%);
+					opacity: 0;
+					color: var(--color-white);
+					font-size: 15px;
+					transition: all 0.5s ease-in-out;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+
+}
+.section_base_info{
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+	background-color: var(--dark-bg-color);
+	border-bottom: 1px solid var(--main-bg-color);
+	border-top: 1px solid var(--main-bg-color);
+	.base_info_item{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 45%;
+		text-align: start;
+		.item_title{
+			font-family: 'BenzinExtraBold', sans-serif;
+			font-size: 14px;
+			color: var(--main-white);
+			text-transform: uppercase;
+		}
+		.item_text{
+			font-family: 'BenzinRegular', sans-serif;
+			font-size: 20px;
+			color: var(--text-grey);
+		}
+	}
+
+}

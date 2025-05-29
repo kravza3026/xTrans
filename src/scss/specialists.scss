@@ -17,12 +17,12 @@
 			overflow-x: auto;
 			gap: 20px;
 			justify-content: space-between;
-			overflow: scroll;
 			scrollbar-color: var(--color-orange) var(--main-bg-color);
 			scrollbar-width: unset;
 
 			@media screen and (max-width: 768px) {
 				gap: 10px;
+				overflow-x: scroll;
 			}
 		}
 		.list_item{

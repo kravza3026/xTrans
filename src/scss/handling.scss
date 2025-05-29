@@ -1,9 +1,10 @@
 .handling_container{
 	//margin: 250px 0;
-	background-color: var(--dark-bg-color);
+	background-color: var(--lazy-dark-color);
+	border: 1px solid var(--border-color);
 	position: relative;
 	@media screen and (max-width: 1220px) {
-		min-height: 500px;
+		min-height: 200px;
 	}
 
 	.bg_img{
@@ -19,8 +20,11 @@
 			object-fit: cover;
 			object-position: center;
 			@media screen and (max-width: 1220px) {
-				width: 100%;
+				width: 95%;
 			}
+		}
+		@media screen and (max-width: 1220px) {
+			display: none;
 		}
 	}
 
@@ -33,13 +37,18 @@
 		align-items: start;
 		height: 814px;
 		margin: 10px;
-		@media screen and (min-width: 1220px) {
-			left: 7%;
+		left: 7%;
+		@media screen and (max-width: 1220px) {
+			left: 2%;
+			height: 655px;
 		}
 
 
-		.handing_line, .handling_content_items_left, .handling_content_items_right{
+		.handing_line, .handling_content_items_left, {
 			margin-top: 50px;
+			@media screen and (max-width: 1220px) {
+				margin-top: 25px;
+			}
 		}
 		@media screen and (max-width: 1220px) {
 			.handing_line{display: none}
@@ -51,7 +60,7 @@
 			height: 556px;
 			width: 40%;
 			@media screen and (max-width: 1220px) {
-				width: 100%;
+				width: 95%;
 			}
 
 			:nth-child(1){
@@ -90,11 +99,15 @@
 			}
 			:nth-child(4){
 				@media screen and (min-width: 1220px) {
-					top: 55px;
+					top: 35px;
 					left: 110%;
 				}
 				.absolute_block{
 					z-index: 16;
+					min-height: 70px!important;
+					span{
+						margin-top: 0!important;
+					}
 				}
 				.item_number{
 					z-index: 17;
@@ -106,6 +119,10 @@
 				}
 				.absolute_block{
 					z-index: 14;
+					min-height: 70px!important;
+					span{
+						margin-top: 0!important;
+					}
 				}
 				.item_number{
 					z-index: 15;
@@ -129,7 +146,9 @@
 					transition: all ease 1.5s;
 					transition-delay: 0s;
 					@media screen and (max-width: 1220px) {
-						height: 100px;
+						min-height: 50px;
+						padding: 12px 5px;
+						gap: 10px;
 					}
 
 				}
@@ -137,7 +156,10 @@
 					.absolute_block{
 						transition: all ease-in-out 0.5s;
 						height: 300px;
+						@media screen and (max-width: 1220px) {
+							height: fit-content;
 
+						}
 						.item_more{
 							display: block;
 							opacity: 1;
@@ -157,6 +179,7 @@
 						img{
 							width: 28px;
 							height: 28px;
+							margin-top: 5px;
 						}
 					}
 				}
