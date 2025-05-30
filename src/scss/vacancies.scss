@@ -1,20 +1,27 @@
 .vacancies_section {
+	.section_title{
+		display: flex;
+	}
 	.vacancies_list_container {
 		display: flex;
-		flex-wrap: wrap;
+
 		justify-content: space-between;
 		align-items: start; // краще start, якщо блоки різної висоти
 		width: 100%;
 		gap: 20px; // <-- ось ключ до міжблочного відступу
 
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+		}
 
 		.vacancies_list_item {
-			flex: 1 1 calc(48% - 60px);
+			max-width: 45%;
 			border: 1px solid var(--main-bg-color);
 			background: var(--lazy-dark-color);
 			padding: 20px;
 
 			@media screen and (max-width: 768px) {
+				max-width: 100%;
 				flex: 1 1 100%;
 				padding: 12px;
 			}
@@ -33,9 +40,9 @@
 				width: 100%;
 				height: auto;
 				@media screen and (max-width: 768px) {
-					max-width: 100%;
+					width: 100%;
 					margin: auto;
-					max-height: 155px;
+					height: auto;
 				}
 			}
 		}
@@ -43,7 +50,7 @@
 			font-family: 'BenzinRegular', sans-serif;
 			font-size: 18px;
 			color: var(--main-white);
-			padding: 10px 0;
+			padding: 20px 0;
 			text-transform: uppercase;
 			line-height: 1.2;
 			height: calc(1.2em * 2); /* приблизно два рядки */
@@ -60,10 +67,11 @@
 			justify-content: space-between;
 			gap: 0 20px;
 			margin: 20px 0;
-
+			font-size: 14px;
 			@media screen and (max-width: 768px) {
 				display:grid;
 				gap: 10px;
+				font-size: 12px;
 
 			}
 			div {
@@ -143,7 +151,7 @@
 			@media screen and (max-width: 768px) {
 				width: 70%;
 				height: 27px;
-				padding: 15px 30px;
+				padding: 10px 30px;
 			}
 
 			@media screen and (min-width: 768px) {

@@ -28,9 +28,12 @@
 .main_container{
 	position: relative;
 	.section_title{
+		display: grid;
 		text-transform: uppercase;
 		@media screen and (max-width: 768px) {
 			font-size: 20px;
+			max-width: 100%;
+			display: block;
 		}
 	}
 	.btn_arrow{

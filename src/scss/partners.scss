@@ -2,14 +2,9 @@
 	position: relative;
 	z-index: 1;
 	background-color: var(--dark-bg-color);
-	max-width: 1433px;
 	min-height: 666px;
 	margin: auto;
 	border: 1px solid var(--main-bg-color);
-	@media screen and (max-width: 768px) {
-		max-width: 90%;
-		margin: auto;
-	}
 	.partners_section_container{
 
 			display: flex;
@@ -28,11 +23,12 @@
 	}
 	.bg_img{
 		position: absolute;
-		right: 0;
+		right: -25px;
 		@media screen and (max-width: 768px) {
 			position: relative;
 			width: 100%;
 			margin-top: -10%;
+			right: 0;
 			img{
 				right: 0;
 				width: 100%;
@@ -116,7 +112,7 @@
 		margin-left: 4%;
 
 		@media screen and (max-width: 768px) {
-			width: 90vw;
+			width: 100%;
 			margin-left: 0;
 		}
 
@@ -136,6 +132,8 @@
 			@media screen and (max-width: 768px) {
 				width: 90%;
 				margin: auto;
+				height: 27px;
+				padding: 10px 30px;
 			}
 
 			&:hover {

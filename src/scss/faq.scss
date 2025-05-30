@@ -1,17 +1,18 @@
-.title_container{
-	position: relative;
-	.section_title{
-		text-transform: uppercase;
-		@media screen and (max-width: 768px) {
-			font-size: 26px;
-			max-width: 100%;
-			padding-left: 10px;
+
+.sectionFaq{
+	.title_container{
+		position: relative;
+		.section_title{
+			text-transform: uppercase;
+			@media screen and (max-width: 768px) {
+				font-size: 26px;
+				max-width: 100%;
+				padding-left: 10px;
+			}
 		}
+
 	}
 
-}
-.content{
-	margin: 10px;
 	min-height: 700px;
 	position: relative;
 	border: 1px solid var(--border-color);

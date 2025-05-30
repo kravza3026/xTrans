@@ -1,11 +1,13 @@
-.section_title{
-	text-align: start;
-	display: grid;
-	@media screen and (max-width: 768px) {
-		max-width: 100%!important;
-	}
-}
+
 .application_section_container{
+	border: 1px solid var(--border-color);
+	.section_title{
+		text-align: start;
+		display: grid;
+		@media screen and (max-width: 768px) {
+			max-width: 100%!important;
+		}
+	}
 	background-color: var(--dark-bg-color);
 	position: relative;
 
@@ -21,7 +23,9 @@
 		position: relative;
 		z-index: 2;
 		padding: 25px;
-
+		@media screen and (max-width: 768px) {
+			padding: 15px;
+		}
 		.application_title_container{
 
 			text-align: center;
@@ -44,8 +48,10 @@
 		.application_form{
 			display: grid;
 			gap: 25px;
-			margin-top: 25px;
 			padding: 45px;
+
+			border-radius: 10px;
+			margin-top: 25px;
 			@media screen and (max-width: 768px) {
 				padding: 0;
 				display: block;
@@ -136,7 +142,8 @@
 
 					@media screen and (max-width: 768px) {
 						width: 70%;
-						margin: auto;
+						height: 27px;
+						padding: 10px 30px;
 					}
 
 					&:hover {

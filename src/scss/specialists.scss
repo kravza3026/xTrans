@@ -1,12 +1,14 @@
 
 .specialists_section{
-	padding: 10px;
+	.section_title{
+		text-align: start;
+	}
 
 	.specialists_list_container{
 		background-color: var(--second-bg-color);
-		width: 100%;
-		padding: 25px;
+
 		display: flex;
+		padding: 20px;
 		@media screen and (max-width: 768px) {
 			width: 90%;
 			padding: 15px;
@@ -26,7 +28,7 @@
 			}
 		}
 		.list_item{
-
+			width: 100%;
 			display: grid;
 			justify-content: center;
 			border: 1px solid var(--main-bg-color);
