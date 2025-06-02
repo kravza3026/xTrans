@@ -12,7 +12,7 @@
 body{
 	margin: 0!important;
 	background-color: var(--body-color)!important;
-	overflow-x: hidden;
+	overflow-x: auto;
 }
 .text-orange{
 	color: var(--color-orange);
@@ -36,6 +36,7 @@ main{
 	min-height: 100vh;
 }
 .container{
+
 	max-width: 1450px!important;
 	margin: auto;
 	position: relative;
@@ -47,11 +48,7 @@ main{
 	}
 
 }
-main{
 
-	overflow: hidden;
-	padding: 0;
-}
 .container_xl{
 	padding: 0 30px;
 	position: relative;
@@ -187,13 +184,13 @@ main{
 .swiper-button-prev{
 	width: 50px!important;
 	height: 50px!important;
-	left: 8%!important;
+	left: 5%!important;
 	transition: ease-in-out 0.2s;
 
 	@media screen and (max-width: 768px) {
 		display: none!important;
 	}
-	@media screen and (min-width: 768px) and (max-width: 1600px) {
+	@media screen and (min-width: 768px) and (max-width: 1500px) {
 		display: none!important;
 	}
 	&:hover{
@@ -220,13 +217,13 @@ main{
 .swiper-button-next{
 	width: 50px!important;
 	height: 50px!important;
-	right: 8%!important;
+	right: 5%!important;
 	transition: ease-in-out 0.2s;
 
 	@media screen and (max-width: 768px) {
 		display: none!important;
 	}
-	@media screen and (min-width: 768px) and (max-width: 1600px) {
+	@media screen and (min-width: 768px) and (max-width: 1500px) {
 		display: none!important;
 	}
 	&:hover{

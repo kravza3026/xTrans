@@ -5,7 +5,16 @@
 
 .content_container{
 	margin-top: 20px;
+	position: relative;
+	.bg_logo{
+		position: absolute;
+		right: 25px;
+		bottom: 25px;
 
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
 }
 .list_title{
 	font-family: 'BenzinRegular', sans-serif;

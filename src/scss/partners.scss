@@ -2,8 +2,10 @@
 	position: relative;
 	z-index: 1;
 	background-color: var(--dark-bg-color);
-	min-height: 666px;
+	//min-height: 666px;
 	margin: auto;
+
+	padding: 50px 0;
 	border: 1px solid var(--main-bg-color);
 	.partners_section_container{
 
@@ -23,7 +25,24 @@
 	}
 	.bg_img{
 		position: absolute;
-		right: -25px;
+		right: 0;
+		top: 0;
+		background-image: url("../images/partners/X.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+		width: 70%;
+		height: 100%;
+		@media screen and (min-width: 1500px) {
+			right: -25px;
+
+		}
+		picture{
+			position: absolute;
+			right: 0;
+			bottom: -5px;
+
+		}
 		@media screen and (max-width: 768px) {
 			position: relative;
 			width: 100%;
@@ -32,6 +51,7 @@
 			img{
 				right: 0;
 				width: 100%;
+				height: auto;
 			}
 		}
 
@@ -79,6 +99,8 @@
 				max-width: 50%;
 				z-index: 2;
 				font-family: 'BenzinRegular';
+
+
 
 				@media screen and (max-width: 768px) {
 					max-width: 90%;

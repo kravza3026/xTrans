@@ -1,5 +1,5 @@
 .titleSwiper {
-	//background-image: url("../images/swiperTitle/swiperTitleBg.svg");
+
 
 
 	@media screen and (max-width: 768px) {
@@ -37,6 +37,8 @@
 	z-index: 5;
 	inset: 0;
 	width: 100%;
+	max-width: 1450px;
+	margin: auto;
 	height: 100%;
 
 	.slide_description_container {

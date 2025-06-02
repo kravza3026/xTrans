@@ -1,6 +1,8 @@
 
 .application_section_container{
 	border: 1px solid var(--border-color);
+	background-color: var(--dark-bg-color);
+	position: relative;
 	.section_title{
 		text-align: start;
 		display: grid;
@@ -8,8 +10,7 @@
 			max-width: 100%!important;
 		}
 	}
-	background-color: var(--dark-bg-color);
-	position: relative;
+
 
 	input[type="text"]:focus,
 	input[type="date"]:focus {
@@ -124,8 +125,9 @@
 
 
 				@media screen and (max-width: 768px) {
-					width: 90vw;
-					margin-left: 0;
+					width: 90%;
+					margin-left: auto;
+					margin-right: auto;
 					margin-top: 20px;
 				}
 

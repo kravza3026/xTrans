@@ -95,9 +95,9 @@
 			background-color: var(--second-bg-color);
 			border-radius: 50px;
 			color: var(--main-white);
-			@media screen and (max-width: 768px) {
-				padding: 5px 20px;
-			}
+				@media screen and (max-width: 768px) {
+					padding: 5px 20px;
+				}
 				.filter_item_title{
 					span{
 						font-family: 'BenzinRegular', sans-serif;
@@ -107,17 +107,18 @@
 				svg{
 					fill: #5B5C61;
 				}
-		}
-		.filter_item.active{
-			background-color: var(--dark-bg-color);
-			outline: 1px solid var(--border-color);
-			color: var(--color-orange);
-			text-align: center;
-			transition: all 0.8s ease-in-out;
-			svg{
-				fill: var(--color-orange)!important;
+			&.active{
+				background-color: var(--dark-bg-color);
+				outline: 1px solid var(--border-color);
+				color: var(--color-orange);
+				text-align: center;
+				transition: all 0.8s ease-in-out;
+				svg{
+					fill: var(--color-orange)!important;
+				}
 			}
 		}
+
 	}
 }
 .keys_items{
