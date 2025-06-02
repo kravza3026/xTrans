@@ -34,6 +34,7 @@
 			padding: 10px 20px;
 			background-color: var(--second-bg-color);
 			border-radius: 50px;
+			outline: 1px solid transparent;
 			color: var(--main-white);
 			@media screen and (max-width: 768px) {
 				padding: 5px 20px;
@@ -55,7 +56,7 @@
 			outline: 1px solid var(--border-color);
 			color: var(--color-orange);
 			text-align: center;
-			transition: all 0.8s ease-in-out;
+			transition: all 0.3s ease-in-out;
 			svg{
 				fill: var(--color-orange)!important;
 			}
@@ -92,10 +93,8 @@
 		opacity: 1;
 		margin-top: 20px;
 		@media screen and (max-width: 768px) {
-			width: 110%;
-			position: absolute;
-			//transform: scale(1.1);
-			left: -5%;
+			width: 100%;
+
 		}
 	}
 }

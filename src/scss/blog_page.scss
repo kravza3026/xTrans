@@ -44,6 +44,9 @@
 			align-items: center;
 			justify-content: space-between;
 			position: relative;
+			@media screen and (max-width: 768px) {
+				flex-direction: column;
+			}
 			.filters{
 				margin: 20px 0;
 				display: flex;
@@ -93,66 +96,124 @@
 
 				}
 			}
+			.filter_container{
+				padding: 10px;
+				width: 100%;
+			}
 			.filters_mobile {
 				margin-bottom: 25px;
-				width: 90%;
+				width: 100%;
 				color: var(--main-white);
 				position: relative; // Потрібен як контекст для абсолютного позиціонування
 
-				.accordion {
-					width: 80%;
-					padding: 10px;
-					user-select: none;
-					background-color: var(--dark-bg-color);
-					border: 1px solid var(--border-color);
-					border-radius: 30px;
-					overflow: visible;
+				.item{
 					position: relative;
-					&.active{
-						border-radius: 30px 30px 0 0
-					}
-					.accordion-header {
-
-						cursor: pointer;
+					padding: 25px;
+					z-index: 22;
+					.absolute_block{
 						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						width: 100%;
-						padding: 10px;
-
-						.accordion-icon{
-							margin-right: 15px;
-						}
-					}
-
-					.accordion-body {
-						position: absolute;
-
-						width: 100%;
-						top: 100%;
-						left: -1px;
-						right: 0;
-						background-color: var(--dark-bg-color);
+						gap: 20px;
+						align-items: start;
+						height: 44px;
 						border: 1px solid var(--border-color);
-						border-top: none;
-						z-index: 1000;
-						border-radius: 0 0 30px 30px;
+						border-radius: 50px;
+						padding: 0px;
+						background-color: var(--second-bg-color);
+						position: absolute;
+						inset: 0;
+						overflow: hidden;
+						transition: all ease 1.5s;
+						transition-delay: 0s;
 
-						.accordion-item {
-							padding: 20px;
-							cursor: pointer;
+
+					}
+					&:hover{
+						.absolute_block{
+							transition: all ease-in-out 0.8s;
+							height: 350px;
 
 
+							.item_more{
+								display: block;
+								opacity: 1;
+								transition: all ease-in-out .7s;
+							}
+						}
+
+					}
+
+					.item_title_container{
+						display: flex;
+						align-items: start;
+						gap: 20px;
+						overflow: hidden;
+						width: 90%;
+
+
+						@media screen and (max-width: 1220px) {
+							img{
+								width: 28px;
+								height: 28px;
+								margin-top: 5px;
+							}
 						}
 					}
 
-					.accordion-hide {
-						display: none;
+
+					.item_title{
+						font-family: 'BenzinSemibold', sans-serif;
+						color: var(--main-white);
+						text-transform: uppercase;
+						font-size: 15px;
+						height: 100%;
+						width: 100%;
+						overflow: hidden;
+						@media screen and (max-width: 1220px) {
+							font-size: 12px;
+						}
+
+						span{
+							height: 60px;
+							display: flex;
+							align-items: center;
+							padding-left: 44px;
+							@media screen and (max-width: 1220px) {
+								height: 70px;
+								margin-top: -10px;
+							}
+						}
+						ul{
+							width: 100%;
+							padding-left: 44px;
+							padding-bottom: 15px;
+							li{
+								padding: 15px 0;
+								width: 100%;
+								list-style: none;
+								margin-top: 10px;
+								text-transform: none;
+								font-size: 14px;
+								font-family: 'BenzinRegular', sans-serif;
+								color: var(--main-white);
+								border-bottom: 1px solid var(--border-color);
+							}
+						}
+
+						.item_more{
+							position: relative;
+							padding:0;
+							overflow: hidden;
+							margin-top: 10px;
+							left: 0;
+							font-size: 12px;
+							width: 100%;
+
+							opacity: 0;
+							transition: opacity ease-in-out .7s;
+						}
+
 					}
 
-					.accordion-show {
-						display: block;
-					}
 				}
 			}
 
@@ -172,6 +233,9 @@
 				right: 0;
 				padding: 5px;
 				transition: all 0.8s ease-in-out;
+				@media screen and (max-width: 768px) {
+					position: relative;
+				}
 				.search_container {
 					display: flex;
 					text-align: center;

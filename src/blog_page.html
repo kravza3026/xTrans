@@ -52,16 +52,33 @@
 							</div>
 						</div>
 					</div>
-					<div class="filters_mobile" >
-						<div class="accordion" id="accordionSelect">
-							<div class="accordion-header">
-								<span class="accordion-title">Оберіть опцію</span>
-								<span class="accordion-icon">▼</span>
-							</div>
-							<div class="accordion-body accordion-hide">
-								<div class="accordion-item">Опція 1</div>
-								<div class="accordion-item">Опція 2</div>
-								<div class="accordion-item">Опція 3</div>
+					<div class="filter_container">
+						<div class="filters_mobile" >
+							<div class="item">
+
+								<div class="absolute_block">
+									<div class="item_title_container">
+
+										<div class="item_title">
+											<span>Авіаперевезення</span>
+											<div class="item_more">
+												<ul>
+													<li>
+														Морські перевезення
+													</li>
+													<li>
+														Не габаритні перевезення
+													</li>
+													<li>
+														Викуп товару
+													</li>
+													<li>Імпорт товару</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -313,6 +330,7 @@
 			e.stopPropagation();
 			body.classList.toggle('accordion-show');
 			body.classList.toggle('accordion-hide');
+			accordion.classList.toggle('active');
 		});
 
 		// Обираємо опцію

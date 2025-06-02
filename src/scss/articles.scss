@@ -11,12 +11,7 @@
 	@media screen and (max-width: 768px) {
 		padding: 0!important;
 	}
-.swiper-button-next{
-	right: 5%!important;
-}
-.swiper-button-prev{
-	left: 5%!important;
-}
+
 .swiper-pagination{
 	display: none!important;
 	position: relative!important;
@@ -29,14 +24,9 @@
 	max-width: 1450px!important;
 	margin: auto;
 	position: relative;
-	padding: 30px 0;
 
-	@media screen and (max-width: 1450px) {
-		max-width: 98%!important;
-	}
-	@media screen and (max-width: 768px) {
-		max-width: 95%!important;
-	}
+
+
 }
 	.swiper_bg{
 		width: 100%;
@@ -74,7 +64,9 @@
 	}
 }
 .articlesSwiper{
-
+	max-width: 1450px;
+	padding: 25px;
+	background-color: var(--second-bg-color);
 
 	.swiper-scrollbar{
 
@@ -114,9 +106,7 @@
 	}
 	.swiper-slide{
 		border: 1px solid var(--main-bg-color);
-		width: calc(33% - 30px) !important;
-		margin:0 15px;
-		//max-width: 314px;
+
 
 		background-color: var(--lazy-dark-color);
 		@media screen and (max-width: 768px) {
