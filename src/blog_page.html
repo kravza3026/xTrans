@@ -14,7 +14,9 @@
 			<div class="blog_head">
 				<div class="background_block"></div>
 				<div class="blog_title container">
-					<h1>блог</h1>
+					<div class="title">
+						<h1>блог</h1>
+					</div>
 				</div>
 			</div>
 			<div class="container blog_content">
@@ -54,25 +56,34 @@
 					</div>
 					<div class="filter_container">
 						<div class="filters_mobile" >
-							<div class="item">
+							<div id="dropdown_container">
 
 								<div class="absolute_block">
 									<div class="item_title_container">
 
 										<div class="item_title">
-											<span>Авіаперевезення</span>
+											<div class="item_title_collapse">
+												<span class="accordion-title">Авіаперевезення</span>
+												<div class="arrow">
+													<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.0038 -3.09086e-08L11.7109 0.707107L5.85738 6.56066L0.00382993 0.707106L0.710938 -4.80825e-07L5.85738 5.14605L11.0038 -3.09086e-08Z" fill="white"/>
+													</svg>
+												</div>
+
+											</div>
+
 											<div class="item_more">
 												<ul>
-													<li>
+													<li class="accordion-item">
 														Морські перевезення
 													</li>
-													<li>
+													<li class="accordion-item">
 														Не габаритні перевезення
 													</li>
-													<li>
+													<li class="accordion-item">
 														Викуп товару
 													</li>
-													<li>Імпорт товару</li>
+													<li class="accordion-item">Імпорт товару</li>
 												</ul>
 											</div>
 										</div>
@@ -88,7 +99,7 @@
 							<div class="search_input">
 								<div class="search_input_block">
 									<label for="search"></label>
-									<input id="search" name="search" type="text" placeholder="Пошук">
+									<input autocomplete="off" id="search" name="search" type="text" placeholder="Пошук">
 								</div>
 								<div class="search-close">
 									<img src="images/blog_page/close_btn.svg" width="19" height="14" alt="close">
@@ -282,7 +293,23 @@
 						</div>
 					</div>
 				</div>
+				<div class="pagination">
+					<div class="pagination_btn pagination_btn_prev">
+						<img width="24" height="24" src="images/keys_page/btn_prev.svg" alt="btn prev">
+					</div>
+					<div class="pagination_items">
+						<div class="pagination_item active">1</div>
+						<div class="pagination_item m-hide">2</div>
+						<div class="pagination_item m-hide">3</div>
+						<div class="pagination_item_dots">...</div>
+						<div class="pagination_item">25</div>
+					</div>
+					<div class="pagination_btn pagination_btn_next">
+						<img width="24" height="24" src="images/keys_page/btn_next.svg" alt="btn next">
+					</div>
+				</div>
 			</div>
+
 		</div>
 
 	</main>
@@ -290,6 +317,7 @@
 
 	<script>
 		const searchIcon = document.querySelector('.search_icon');
+		const searchInput = document.getElementById('search');
 		const searchBlock = document.querySelector('.search');
 		const closeButton = document.querySelector('.search-close');
 
@@ -299,7 +327,11 @@
 		});
 
 		closeButton.addEventListener('click', () => {
+			searchInput.value = '';
 			searchBlock.classList.remove('active');
+		});
+		searchInput.addEventListener('click', () => {
+			searchBlock.classList.add('active');
 		});
 
 		document.addEventListener('click', (e) => {
@@ -320,16 +352,14 @@
 
 
 
-		const accordion = document.getElementById('accordionSelect');
+		const accordion = document.getElementById('dropdown_container');
 		const header = accordion.querySelector('.accordion-header');
 		const title = accordion.querySelector('.accordion-title');
 		const body = accordion.querySelector('.accordion-body');
 		const itemsSelect = accordion.querySelectorAll('.accordion-item');
 
-		header.addEventListener('click', (e) => {
-			e.stopPropagation();
-			body.classList.toggle('accordion-show');
-			body.classList.toggle('accordion-hide');
+		accordion.addEventListener('click', (e) => {
+
 			accordion.classList.toggle('active');
 		});
 
@@ -345,8 +375,7 @@
 		// Закриття при кліку поза акордеоном
 		document.addEventListener('click', (e) => {
 			if (!accordion.contains(e.target)) {
-				body.classList.remove('accordion-show');
-				body.classList.add('accordion-hide');
+				accordion.classList.remove('active');
 			}
 		});
 

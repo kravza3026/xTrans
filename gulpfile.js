@@ -13,7 +13,7 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { javascript } from './gulp/tasks/javascript.js';
 import { images } from './gulp/tasks/images.js';
-import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
+import { fontStyle, copyFonts } from "./gulp/tasks/fonts.js";
 import { createSvgSprite } from './gulp/tasks/create-svg-sprite.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftpDeploy } from './gulp/tasks/ftp-deploy.js';
@@ -30,6 +30,8 @@ const handleImages = images.bind(null, isBuild, browserSyncInstance);
 /**
  * Наблюдатель за изменениями в файлах
  */
+
+
 function watcher() {
 	gulp.watch(filePaths.watch.static, copy);
 	gulp.watch(filePaths.watch.html, handleHTML);
@@ -41,7 +43,7 @@ function watcher() {
 /**
  * Последовательная обработка шрифтов
  * */
-const fonts = gulp.series( ttfToWoff, fontStyle);
+const fonts = gulp.series(copyFonts,fontStyle);
 
 /**
  * Параллельные задачи в режиме разработки
@@ -51,12 +53,13 @@ const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML,
 /**
  * Основные задачи
  * */
-const mainTasks = gulp.series( devTasks);
+const mainTasks = gulp.series(fonts, devTasks);
 
 /**
  * Построение сценариев выполнения задач
  * */
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, handleServer));
+
+const dev = gulp.series( mainTasks, gulp.parallel(watcher, handleServer));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);

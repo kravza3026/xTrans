@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import { existsSync, promises } from 'node:fs';
-import fonter from 'gulp-fonter-fix';
-import ttf2woff2 from 'gulp-ttf2woff2';
+
 
 import { filePaths } from '../config/paths.js';
 import { logger } from '../config/logger.js';
@@ -29,49 +28,20 @@ const fontWeights = {
 	ultrablack: 950,
 };
 
-const fontFaceTemplate = (name, file, weight, style) => `@font-face {
-	font-family: ${name};
+const fontFaceTemplate = (name, file) => `@font-face {
+	font-family: '${name}';
 	font-display: swap;
 	src: url("../fonts/${file}.woff2") format("woff2");
-	font-weight: ${weight};
-	font-style: ${style};
+	font-style: normal;
 }\n\n`;
 
-export const otfToTtf = (done) => {
-	if (existsSync(fontFacesFile)) return done();
-	/** Поиск шрифтов .otf */
-	return gulp.src(`${filePaths.src.fonts}/*.otf`, {})
-		.pipe(logger.handleError('FONTS [otfToTtf]'))
 
-		/** Конвертация в .ttf */
-		.pipe(fonter({ formats: ['ttf'] }))
-
-		/** Выгрузка в исходную папку */
-		.pipe(gulp.dest(filePaths.src.fonts));
-};
-
-export const ttfToWoff = () => {
-	if (existsSync(fontFacesFile)) {
-		return gulp.src(`${filePaths.src.fonts}/*.woff2`, {})
-			.pipe(logger.handleError('FONTS [ttfToWoff]'))
-			.pipe(gulp.dest(filePaths.build.fonts));
-	}
-
-	/** Поиск шрифтов [.ttf] и конвертация в [.woff2] */
-	return gulp.src(`${filePaths.src.fonts}/*.ttf`, {})
-		.pipe(logger.handleError('FONTS [ttfToWoff]'))
-		.pipe(ttf2woff2())
-		.pipe(gulp.dest(filePaths.src.fonts))
-
-		/** Если нужно раскомментировать. Конвертация в [.woff] */
-		.pipe(gulp.src(`${filePaths.src.fonts}/*.ttf`))
-		.pipe(fonter({ formats: ['woff'] }))
-		.pipe(gulp.dest(filePaths.build.fonts))
-
-		/** Поиск шрифтов [.woff, .woff2] и выгрузка в финальную папку */
-		.pipe(gulp.src(`${filePaths.src.fonts}/*.{woff,woff2}`))
+export const copyFonts = () => {
+	return gulp.src(`${filePaths.src.fonts}/*.woff2`, {}) // buffer: true - обов’язково!
 		.pipe(gulp.dest(filePaths.build.fonts));
 };
+
+
 
 export const fontStyle = async () => {
 	try {
@@ -98,7 +68,7 @@ export const fontStyle = async () => {
 				const weightString = fontWeights[weight.replace(cleanSeparator, '').toLowerCase()];
 				const fontStyle = italicRegex.test(fileName) ? 'italic' : 'normal';
 
-				await promises.appendFile(fontFacesFile, fontFaceTemplate(name, fileName, weightString, fontStyle));
+				await promises.appendFile(fontFacesFile, fontFaceTemplate(name, fileName));
 				newFileOnly = fileName;
 			}
 		}

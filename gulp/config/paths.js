@@ -29,6 +29,7 @@ export const filePaths = {
 		html: `${srcFolder}/**/*.html`,
 		images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
 		static: `${srcFolder}/static/**/*.*`,
+		fonts: `${srcFolder}/fonts/*.*`,
 	},
 	buildFolder,
 	srcFolder,

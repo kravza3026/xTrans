@@ -5,6 +5,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: start;
+		@media screen and (max-width: 768px) {
+			height: 111px;
+		}
 		.background_block{
 			position: absolute;
 			inset: 0;
@@ -17,6 +20,10 @@
 			font-size: 40px;
 			color: var(--main-white);
 			text-transform: uppercase;
+			width: 100%;
+			@media screen and (max-width: 768px) {
+				font-size: 28px;
+			}
 		}
 	}
 	.blog_content{
@@ -44,8 +51,8 @@
 			align-items: center;
 			justify-content: space-between;
 			position: relative;
-			@media screen and (max-width: 768px) {
-				flex-direction: column;
+			@media screen and (max-width: 1100px) {
+				flex-direction: column-reverse;
 			}
 			.filters{
 				margin: 20px 0;
@@ -53,7 +60,7 @@
 				justify-content: start;
 				align-items: center;
 				gap: 15px;
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 1100px) {
 					display: none;
 					margin: 10px auto;
 					gap: 15px;
@@ -66,6 +73,9 @@
 					padding: 10px;
 					gap:0 10px;
 					background-color: var(--second-bg-color);
+					@media screen and (min-width: 768px) and (max-width: 1440px) {
+						gap: 0;
+					}
 					.filter_item{
 						display: flex;
 						align-items: center;
@@ -76,6 +86,9 @@
 						color: var(--main-white);
 						cursor: pointer;
 						outline: 1px solid transparent;
+						@media	screen and (max-width: 1440px) {
+							padding: 10px 15px;
+						}
 						@media screen and (max-width: 768px) {
 							padding: 5px 20px;
 						}
@@ -83,6 +96,9 @@
 							span{
 								font-family: 'BenzinRegular', sans-serif;
 								font-size: 16px;
+								@media screen and (max-width: 1440px) {
+									font-size: 14px;
+								}
 							}
 						}
 						&.active{
@@ -98,39 +114,55 @@
 			}
 			.filter_container{
 				padding: 10px;
+				display: flex;
+				align-items: center;
 				width: 100%;
+				margin-bottom: 25px;
+				@media screen and (min-width: 1100px) {
+					display: none;
+				}
+				.filter_title{
+					font-family: 'BenzinRegular', sans-serif;
+					font-size: 16px;
+					color: var(--text-grey);
+					text-transform: uppercase;
+					margin-right: 10px;
+				}
+
 			}
 			.filters_mobile {
-				margin-bottom: 25px;
+
 				width: 100%;
 				color: var(--main-white);
 				position: relative; // Потрібен як контекст для абсолютного позиціонування
 
-				.item{
+				#dropdown_container{
+
 					position: relative;
 					padding: 25px;
 					z-index: 22;
 					.absolute_block{
+						padding: 5px;
 						display: flex;
 						gap: 20px;
 						align-items: start;
 						height: 44px;
 						border: 1px solid var(--border-color);
 						border-radius: 50px;
-						padding: 0px;
 						background-color: var(--second-bg-color);
 						position: absolute;
 						inset: 0;
 						overflow: hidden;
-						transition: all ease 1.5s;
+						transition: all ease .7s;
 						transition-delay: 0s;
 
 
 					}
-					&:hover{
+					 &.active{
 						.absolute_block{
-							transition: all ease-in-out 0.8s;
-							height: 350px;
+							transition: all ease-in-out 0.7s;
+							height: 320px;
+							border-radius: 40px;
 
 
 							.item_more{
@@ -139,16 +171,21 @@
 								transition: all ease-in-out .7s;
 							}
 						}
+						 .item_title_container{
+							 border-radius: 35px;
+						 }
 
 					}
 
 					.item_title_container{
+						border-radius: 45px;
 						display: flex;
 						align-items: start;
 						gap: 20px;
 						overflow: hidden;
-						width: 90%;
-
+						width: 100%;
+						height: 100%;
+						background-color: var(--dark-bg-color);
 
 						@media screen and (max-width: 1220px) {
 							img{
@@ -171,20 +208,30 @@
 						@media screen and (max-width: 1220px) {
 							font-size: 12px;
 						}
-
-						span{
-							height: 60px;
+						.item_title_collapse{
 							display: flex;
 							align-items: center;
-							padding-left: 44px;
-							@media screen and (max-width: 1220px) {
-								height: 70px;
-								margin-top: -10px;
+							justify-content: space-between;
+							height: 56px;
+							span, .arrow{
+
+								display: flex;
+								align-items: center;
+								padding-left: 30px;
+								@media screen and (max-width: 1220px) {
+									//height: 70px;
+									margin-top: -10px;
+								}
 							}
+							span{padding-left: 30px;}
+							.arrow{
+								padding-right: 35px;
+							}
+
 						}
 						ul{
-							width: 100%;
-							padding-left: 44px;
+							width: 85%;
+							padding-left: 30px;
 							padding-bottom: 15px;
 							li{
 								padding: 15px 0;
@@ -203,7 +250,7 @@
 							position: relative;
 							padding:0;
 							overflow: hidden;
-							margin-top: 10px;
+							margin-top: -25px;
 							left: 0;
 							font-size: 12px;
 							width: 100%;
@@ -233,8 +280,46 @@
 				right: 0;
 				padding: 5px;
 				transition: all 0.8s ease-in-out;
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 1100px) {
 					position: relative;
+					width: 100%;
+					height: 44px;
+					padding: 5px 0;
+					border: 1px solid var(--border-color);
+					transition: all .3s ease-in-out;
+					justify-content: end;
+
+					.search_input{
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						border: none;
+						outline: none;
+						width: 100%;
+
+						//.search-close{
+						//	padding: 15px;
+						//	margin-right: 50px;
+						//}
+						.search_input_block{
+							width: 95%;
+						}
+
+						input {
+							background-color: transparent;
+							border: none;
+							color: var(--main-white);
+
+							width: 100%;
+							font-family: 'BenzinRegular', sans-serif;
+							font-size: 14px;
+
+							&:focus{
+								border: none;
+								outline: none;
+							}
+						}
+					}
 				}
 				.search_container {
 					display: flex;
@@ -243,7 +328,15 @@
 					width: 100%;
 					height: 65px;
 					align-items: center;
+					@media screen and (max-width: 768px) {
+						width: 98%;
+					}
 
+					.search-close{
+						@media screen and (max-width: 768px) {
+							display: none;
+						}
+					}
 				}
 				&.active{
 					width: 100%;
@@ -262,12 +355,19 @@
 
 						.search-close{
 							padding: 15px;
+							@media screen and (max-width: 768px) {
+								padding: 15px;
+								margin-right: 30px;
+								display: block;
+							}
 						}
 						.search_input_block{
 							width: 95%;
 						}
+
+
 						input{
-							background-color: transparent;
+							background-color: transparent!important;
 							border: none;
 							color: var(--main-white);
 							padding: 20px;
@@ -286,15 +386,30 @@
 				}
 				.search_input{
 					display: none;
+					@media screen and (max-width: 1100px) {
+						display: flex;
+					}
 				}
 				.search_icon{
 					border: 1px solid var(--border-color);
 					background-color: var(--dark-bg-color);
 					border-radius: 50px;
 					text-align: center;
-					padding: 20px;
+					padding: 15px;
 					position: absolute;
 					right: 5px;
+					width: 32px;
+					height: 32px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@media screen and (max-width: 1100px) {
+						padding: 5px;
+						width: 30px;
+						height: 30px;
+						right: 10px;
+
+					}
 				}
 			}
 

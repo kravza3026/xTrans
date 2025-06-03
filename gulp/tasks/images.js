@@ -18,10 +18,10 @@ export const images = (isBuild, serverInstance) => {
 			plugins.if(
 				isBuild,
 				imageMin({
-					progressive: true,
+					progressive: false,
 					svgoPlugins: [{ removeViewBox: false }],
-					interlaced: true,
-					optimizationLevel: 3, // 0 to 7
+					interlaced: false,
+					optimizationLevel: 5, // 0 to 7
 				}),
 			),
 		)
