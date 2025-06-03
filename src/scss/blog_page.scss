@@ -31,7 +31,13 @@
 			margin-top: 70px;
 			display: flex;
 			gap: 20px;
-
+			@media screen and (max-width: 1100px) {
+				margin-top: 40px;
+			}
+			@media screen and (max-width: 768px) {
+				margin-top: 20px;
+				gap: 10px;
+			}
 			.tab_item{
 				font-family: 'BenzinRegular', sans-serif;
 				font-size: 24px;
@@ -226,6 +232,11 @@
 							span{padding-left: 30px;}
 							.arrow{
 								padding-right: 35px;
+								transition: all ease-in-out .7s;
+								&.active{
+									transform: rotateX(180deg);
+									transition: all ease-in-out .7s;
+								}
 							}
 
 						}
@@ -313,7 +324,9 @@
 							width: 100%;
 							font-family: 'BenzinRegular', sans-serif;
 							font-size: 14px;
-
+							&::placeholder{
+								padding-left: 30px;
+							}
 							&:focus{
 								border: none;
 								outline: none;
@@ -333,9 +346,7 @@
 					}
 
 					.search-close{
-						@media screen and (max-width: 768px) {
 							display: none;
-						}
 					}
 				}
 				&.active{
@@ -352,13 +363,17 @@
 						border: none;
 						outline: none;
 						width: 95%;
+						height: 45%;
 
 						.search-close{
 							padding: 15px;
-							@media screen and (max-width: 768px) {
+							display: flex;
+							align-items: center;
+
+							@media screen and (max-width: 1220px) {
 								padding: 15px;
 								margin-right: 30px;
-								display: block;
+
 							}
 						}
 						.search_input_block{

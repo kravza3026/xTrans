@@ -353,7 +353,7 @@
 
 
 		const accordion = document.getElementById('dropdown_container');
-		const header = accordion.querySelector('.accordion-header');
+		const arrow = accordion.querySelector('.arrow');
 		const title = accordion.querySelector('.accordion-title');
 		const body = accordion.querySelector('.accordion-body');
 		const itemsSelect = accordion.querySelectorAll('.accordion-item');
@@ -361,6 +361,7 @@
 		accordion.addEventListener('click', (e) => {
 
 			accordion.classList.toggle('active');
+			arrow.classList.toggle('active');
 		});
 
 		// Обираємо опцію
