@@ -65,6 +65,7 @@ html {
 
 					h2{
 						font-size: 28px;
+						margin: 15px 0;
 						@media screen and (max-width: 768px) {
 							line-height: 24px;
 							display: block;
@@ -73,7 +74,7 @@ html {
 							padding: 0;
 							letter-spacing: 1px;
 						}
-						margin: 15px 0;
+
 					}
 				}
 				.items_container{
@@ -330,7 +331,7 @@ html {
 					gap: 10px;
 					justify-content: end;
 					@media screen and (max-width: 768px) {
-						justify-content: space-between;
+						justify-content: start;
 					}
 
 
@@ -447,6 +448,17 @@ html {
 
 }
 .recArtContainer{
+	margin-top: 30px;
+	.art-swiper-pagination{
+		position: absolute!important;
+		bottom: -5px!important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media screen and (min-width: 1550px) {
+			display: none;
+		}
+	}
 	.articlesSwiper{
 		display: flex;
 		align-items: center;
@@ -454,6 +466,9 @@ html {
 	}
 	.section_title{
 		text-align: center;
+		@media screen and (max-width: 768px) {
+			max-width: 100%;
+		}
 	}
 	//padding:0 75px!important;
 	@media screen and (max-width: 768px) {
@@ -465,6 +480,8 @@ html {
 		position: relative!important;
 		@media screen and (max-width: 768px) {
 			display: block!important;
+			position: absolute!important;
+			bottom: -25px!important;
 		}
 	}
 
@@ -476,6 +493,7 @@ html {
 
 
 	}
+
 
 
 	.swiperTitle{
@@ -498,7 +516,9 @@ html {
 		max-width: 1400px;
 		padding: 25px;
 		background-color: var(--second-bg-color);
-
+		@media screen and (max-width: 768px) {
+			padding: 13px;
+		}
 		.swiper-scrollbar{
 
 			display: none;
@@ -515,6 +535,7 @@ html {
 			display: flex;
 			justify-content: center;
 			width: 100%;
+			max-width: 450px;
 			object-fit: cover;
 			object-position: center;
 
@@ -522,8 +543,8 @@ html {
 				max-width: 100%;
 			}
 			img{
-				height: auto;
-				width: 100%;
+				max-width: 100%;
+				max-height: 200px;
 				margin: auto;
 
 				@media screen and (max-width: 768px) {
@@ -536,13 +557,8 @@ html {
 		}
 		.swiper-slide{
 			border: 1px solid var(--main-bg-color);
-
-
 			background-color: var(--lazy-dark-color);
-			@media screen and (max-width: 768px) {
-				width: calc(90% - 32px) !important;
-				margin:20px 10px;
-			}
+
 			:hover{
 				.slide_description_button{
 					display: flex;
@@ -556,7 +572,9 @@ html {
 		.slide_container{
 			background-color: var(--lazy-dark-color);
 			text-align: start;
-			padding: 25px;
+			padding: 10px;
+			min-height: 362px;
+			max-width: 450px;
 			margin: auto;
 			:nth-child(2){
 				padding-top: 6px;
@@ -567,37 +585,35 @@ html {
 
 			@media screen and (max-width: 768px) {
 				max-width: 100%;
+				min-height: auto;
 				margin: auto;
 			}
-
+			.slide_date{
+				width: fit-content;
+				margin: 16px 0;
+				padding: 6px;
+				font-family: 'BenzinRegular', sans-serif;
+				font-size: 12px;
+				line-height: 150%;
+				display: flex;
+				gap: 6px;
+				align-items: center;
+				color: var(--text-grey);
+				background-color: var(--dark-bg-color);
+			}
 			.slide_info{
 				color: var(--main-white);
 				font-family: 'BenzinSemibold', sans-serif;
 				font-size: 16px;
-				padding: 25px 0;
-
-				p{
-					padding:0 5px;
-					font-size: 16px;
-					line-height: 24px;
-					display: -webkit-box;
-					-webkit-line-clamp: 2;
-					-webkit-box-orient: vertical;
-					max-height: 48px;
-
-
-				}
 
 			}
 			.slide_link{
-				padding: 0 5px;
 				a{
 					font-family: 'BenzinMedium' , sans-serif;
 					color: var(--color-orange);
 					text-transform: uppercase;
 					font-size: 12px;
-					text-decoration: none;
-					border-bottom: 1px solid var(--color-orange);
+					letter-spacing: 1.1px;
 				}
 			}
 		}
@@ -615,11 +631,18 @@ html {
 	padding: 80px;
 	background-color: var(--dark-bg-color);
 	border: 1px solid var(--border-color);
+	@media screen and (max-width: 768px) {
+		background-image: none;
+		padding: 10px;
+	}
 	.subscript_img{
 		position: absolute;
 		right: 0;
 		bottom: -4px;
+		@media screen and (max-width: 768px) {
+			display: none;
 
+		}
 		img{
 			max-height: 100%;
 		}
@@ -631,9 +654,16 @@ html {
 		width: 100%;
 		.subscript_description{
 			max-width: 75%;
+			@media screen and (max-width: 768px) {
+				max-width: 100%;
+			}
 			.section_title{
 				line-height: 48px;
 				font-size: 38px;
+				@media screen and (max-width: 768px) {
+					font-size: 24px;
+					line-height: 30px;
+				}
 			}
 		}
 		.description_subtitle{
@@ -642,6 +672,10 @@ html {
 			color: var(--main-white);
 			text-transform: uppercase;
 			margin: 30px 0;
+			@media screen and (max-width: 768px) {
+				font-size: 15px;
+				margin: 15px 0;
+			}
 		}
 		.description_input{
 			margin: 15px 0;
@@ -649,7 +683,9 @@ html {
 				width: 40%;
 				display: grid;
 				gap: 15px;
-
+				@media screen and (max-width: 768px) {
+					width: calc(100% - 15px);
+				}
 
 				input{
 					background-color: transparent;
@@ -660,7 +696,10 @@ html {
 					padding: 15px;
 					width: 100%;
 					outline: none;
-					&::placeholder{}
+					@media screen and (max-width: 768px) {
+						width: calc(100% - 30px);
+					}
+
 				}
 				.partners_btn {
 					background-color: transparent;
@@ -745,6 +784,10 @@ html {
 	padding: 80px;
 	background-color: var(--dark-bg-color);
 	border: 1px solid var(--border-color);
+	@media screen and (max-width: 768px) {
+		padding: 10px;
+	}
+	.ask_img{}
 	.subscript_img{
 		position: absolute;
 		left: 0;
@@ -752,6 +795,9 @@ html {
 
 		img{
 			max-height: 100%;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
 		}
 	}
 	.subscript_section_container{
@@ -765,10 +811,19 @@ html {
 			display: grid;
 			justify-items: end;
 			max-width: 50%;
+			@media screen and (max-width: 768px) {
+				max-width: 100%;
+			}
 			.section_title{
+				width: 100%;
 				text-align: right;
 				line-height: 48px;
 				font-size: 38px;
+				@media screen and (max-width: 768px) {
+					max-width: 100%;
+					font-size: 26px;
+					line-height: 30px;
+				}
 			}
 		}
 		.dark_text{
@@ -777,6 +832,9 @@ html {
 			font-size: 107px;
 			text-transform: uppercase;
 			color: var(--body-color);
+			@media screen and (max-width: 768px) {
+				font-size: 64px;
+			}
 		}
 		.description_subtitle{
 			font-family: 'BenzinMedium', sans-serif;
@@ -785,6 +843,10 @@ html {
 			color: var(--main-white);
 			text-transform: uppercase;
 			margin: 30px 0;
+			@media screen and (max-width: 768px) {
+				font-size: 16px;
+				margin: 15px 0;
+			}
 		}
 		.ask_btn {
 			background-color: transparent;
@@ -798,7 +860,7 @@ html {
 			margin-top: 20px;
 
 			@media screen and (max-width: 768px) {
-				width: 40vw;
+				width: 85%;
 				margin-left: 0;
 			}
 

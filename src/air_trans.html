@@ -363,9 +363,9 @@
 
 
 		</div>
-		<section>
-			<div class="swiperSection recArtContainer">
-				<h2 class="section_title">рекомендовані <span class="text-orange">статті</span></h2>
+		<section class="recArtContainer">
+			<div class="swiperSection ">
+				<h2 class="section_title">рекомендовані <span>статті</span></h2>
 				<div class="swiper-container-wrapper">
 					<div class="swiper-button-prev articlesPrev"></div>
 					<div class="swiper mySwiper articlesSwiper ">
@@ -377,40 +377,15 @@
 									<div class="slide_img">
 										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
 									</div>
-
-									<div class="slide_info">
-										<p>	Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+									<div class="slide_date">
+										<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+										<span>12.02/2025</span>
 									</div>
-									<div class="slide_link">
-										<a href="#" >детальніше</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide " >
-								<div class="slide_container">
-									<div class="slide_img">
-										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
-									</div>
-
-									<div class="slide_info">
-										<p>Зовнішньоторговельний контракт на перевезення вантажу: ключові аспекти</p>
-									</div>
-									<div class="slide_link">
-										<a href="#" >детальніше</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide " >
-								<div class="slide_container">
-									<div class="slide_img">
-										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
-									</div>
-
 									<div class="slide_info">
 										<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
 									</div>
 									<div class="slide_link">
-										<a href="#" >детальніше</a>
+										<a href="#" >читати статтю</a>
 									</div>
 								</div>
 							</div>
@@ -419,12 +394,15 @@
 									<div class="slide_img">
 										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
 									</div>
-
+									<div class="slide_date">
+										<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+										<span>12.02/2025</span>
+									</div>
 									<div class="slide_info">
 										<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
 									</div>
 									<div class="slide_link">
-										<a href="#" >детальніше</a>
+										<a href="#" >читати статтю</a>
 									</div>
 								</div>
 							</div>
@@ -433,24 +411,59 @@
 									<div class="slide_img">
 										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
 									</div>
-
+									<div class="slide_date">
+										<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+										<span>12.02/2025</span>
+									</div>
 									<div class="slide_info">
 										<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
 									</div>
 									<div class="slide_link">
-										<a href="#" >детальніше</a>
+										<a href="#" >читати статтю</a>
 									</div>
 								</div>
 							</div>
-
+							<div class="swiper-slide " >
+								<div class="slide_container">
+									<div class="slide_img">
+										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+									</div>
+									<div class="slide_date">
+										<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+										<span>12.02/2025</span>
+									</div>
+									<div class="slide_info">
+										<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+									</div>
+									<div class="slide_link">
+										<a href="#" >читати статтю</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide " >
+								<div class="slide_container">
+									<div class="slide_img">
+										<img src="images/articles/articles_2.svg" width="407" height="200" alt="map">
+									</div>
+									<div class="slide_date">
+										<span><img src="images/articles/calendar_icon.svg" width="19" height="19"	 alt="calendar"></span>
+										<span>12.02/2025</span>
+									</div>
+									<div class="slide_info">
+										<p>Унікальна CRM для логістики вперше в Україні – зручне керування вантажами</p>
+									</div>
+									<div class="slide_link">
+										<a href="#" >читати статтю</a>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-pagination"></div>
 					</div>
+					<div class="art-swiper-pagination"></div>
 					<div class="swiper-button-next articlesNext"></div>
 				</div>
 
 			</div>
-			<div class="swiper-pagination"></div>
 		</section>
 		<div class="container">
 			<section class="subscript_section">
@@ -517,14 +530,14 @@
 					slidesPerView: 1,
 					pagination: {
 						clickable: true,
-						el: ".swiper-pagination",
+						el: ".art-swiper-pagination",
 					},
 				},
 				768: {
 					slidesPerView: 2,
 					pagination: {
 						clickable: true,
-						el: ".swiper-pagination",
+						el: ".art-swiper-pagination",
 					},
 				},
 				1200: {

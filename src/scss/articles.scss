@@ -44,23 +44,7 @@
 
 
 }
-	.swiper_bg{
-		width: 100%;
-		max-width: 1450px;
-		height: 125%;
-		margin: auto;
-		inset: 0;
-		background-color: var(--second-bg-color);
-		position: absolute;
-		z-index: -1;
 
-		@media screen and (max-width: 768px) {
-			width: 96%;
-			inset: 0;
-			height: 84%;
-			margin-top: 30px;
-		}
-	}
 
 
 .swiperTitle{
