@@ -22,10 +22,14 @@
 <body>
 	<main>
 		<section>
-			<div class="swiperSection">
-				<div class="swiper mySwiper  titleSwiper">
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-wrapper ">
+			<div class="swiperSection mainSwiper">
+				<div class="swiper-container-wrapper">
+					<div class="customSwiperArrows">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+					<div class="swiper mySwiper  titleSwiper">
+						<div class="swiper-wrapper ">
 						<div class="swiper-slide " >
 							<div class="swiper_bg">
 								<picture>
@@ -118,9 +122,12 @@
 						</div>
 
 					</div>
-					<div class="swiper-button-next"></div>
+
+					</div>
+
 
 					<div class="swiper-pagination"></div>
+
 				</div>
 			</div>
 		</section>
@@ -524,10 +531,9 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
+					<div class="art-swiper-pagination"></div>
 					<div class="swiper-button-next articlesNext"></div>
 				</div>
 
@@ -710,7 +716,7 @@
 						<div class="bg_img">
 							<picture>
 								<!-- Для мобільних пристроїв (до 768px) -->
-								<source srcset="images/partners/partnersBgMobile.svg" width="312" height="245" media="(max-width: 768px)">
+								<source srcset="images/partners/team_x.svg" width="312" height="245" media="(max-width: 768px)">
 								<!-- За замовчуванням (десктоп) -->
 								<img src="images/partners/team_x.svg" alt="command">
 							</picture>
@@ -1575,17 +1581,24 @@
 					slidesPerView: 1,
 					pagination: {
 						clickable: true,
-						el: ".swiper-pagination",
+						el: ".art-swiper-pagination",
 					},
 				},
 				768: {
 					slidesPerView: 2,
 					pagination: {
 						clickable: true,
-						el: ".swiper-pagination",
+						el: ".art-swiper-pagination",
 					},
 				},
 				1200: {
+					slidesPerView:3,
+					pagination: {
+						clickable: true,
+						el: ".art-swiper-pagination",
+					},
+				},
+				1550: {
 					slidesPerView:3
 				}
 

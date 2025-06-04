@@ -4,7 +4,7 @@
 .swiperSection{
 	//padding:0 75px!important;
 	@media screen and (max-width: 768px) {
-		padding: 15px!important;
+		padding: 0!important;
 	}
 }
 
@@ -24,7 +24,7 @@
 }
 
 .directionsSwiper{
-	max-width: 1450px;
+	max-width: 1400px;
 	padding: 25px;
 	background-color: var(--second-bg-color);
 
@@ -36,7 +36,7 @@
 
 		display: none;
 		opacity: 1!important;
-		@media screen and (max-width: 1450px) {
+		@media screen and (max-width: 1550px) {
 			display: block;
 		}
 	}
@@ -60,7 +60,7 @@
 		}
 	}
 	.swiper-wrapper{
-		max-width: 1450px!important;
+
 		margin: auto;
 		position: relative;
 		width: 100%;

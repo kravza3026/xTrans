@@ -1,6 +1,9 @@
 .vacancies_section {
 	.section_title{
 		display: flex;
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
 	}
 	.vacancies_list_container {
 		display: flex;

@@ -2,7 +2,7 @@
 
 
 *{
-
+	//border: 1px solid red!important;
 	p, li{
 		color: var(--main-white);
 		margin: 0;
@@ -155,6 +155,10 @@ main{
 .swiper {
 	width: 100%;
 	height: 100%;
+	margin: 25px!important;
+	@media screen and (max-width: 768px) {
+		margin:25px 0!important;
+	}
 	//min-height: 541px;
 }
 
@@ -191,22 +195,17 @@ main{
 	width: 13px!important;
 	height: 13px!important;
 }
-.swiper-button-prev, .directions-swiper-button-prev, .swiper-button-next.articlesPrev{
-	position: absolute;
+
+.swiper-button-prev , .swiper-button-prev.directionsPrev, .swiper-button-prev.articlesPrev{
+	position: relative!important;
 	width: 50px!important;
 	height: 50px!important;
-	left: 7%!important;
 	transition: ease-in-out 0.2s;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1550px) {
 		display: none!important;
 	}
-	@media screen and (min-width: 768px) and (max-width: 1500px) {
-		display: none!important;
-	}
-	@media screen and (min-width: 1500px) and (max-width: 1600px) {
-		left: 1%!important;
-	}
+
 	&:hover{
 		transform: scale(1.1);
 		transition: ease-in-out 0.2s;
@@ -228,21 +227,16 @@ main{
 	}
 
 }
-.swiper-button-next, .directions-swiper-button-next, .swiper-button-next.articlesNext{
-	position: absolute;
+
+
+.swiper-button-next ,.swiper-button-next.directionsNext, .swiper-button-next.articlesNext{
+	position: relative!important;
 	width: 50px!important;
 	height: 50px!important;
-	right: 7%!important;
 	transition: ease-in-out 0.2s;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1550px) {
 		display: none!important;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1500px) {
-		display: none!important;
-	}
-	@media screen and (min-width: 1500px) and (max-width: 1600px) {
-		right: 1%!important;
 	}
 	&:hover{
 		transform: scale(1.1);

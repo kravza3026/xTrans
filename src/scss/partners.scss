@@ -41,12 +41,14 @@
 			position: absolute;
 			right: 0;
 			bottom: -5px;
+			@media screen and (max-width: 768px) {
+				position: relative;
+			}
 
 		}
 		@media screen and (max-width: 768px) {
 			position: relative;
 			width: 100%;
-			margin-top: -10%;
 			right: 0;
 			img{
 				right: 0;

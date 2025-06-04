@@ -1,6 +1,24 @@
-.titleSwiper {
+.mainSwiper {
+	.titleSwiper{
+		margin: 0!important;
+	}
+	.swiper-container-wrapper{
+		padding: 0!important;
+	}
 
 
+	.customSwiperArrows{
+		position: absolute;
+		width: 1600px;
+		max-width: 100%;
+		inset: 0;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		@media screen and (max-width: 1550px) {
+			display: none;
+		}
+	}
 
 	@media screen and (max-width: 768px) {
 		background-image: url("../images/swiperTitle/swiperTitleBgMobile.svg");
@@ -54,6 +72,9 @@
 			align-items: flex-end;
 			height: auto;
 			margin: 80px 0;
+		}
+		@media screen and (max-width: 1450px) {
+			padding: 0 10px;
 		}
 
 		.slide_description_title {
