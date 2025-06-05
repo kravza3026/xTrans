@@ -54,6 +54,9 @@
 						left: 21px;
 						height: 135px;
 					}
+					@media screen and (min-width: 768px) and (max-width: 1200px) {
+						height: 160px;
+					}
 				}
 				.head_items_item{
 					display: flex;
@@ -246,8 +249,9 @@
 				.slide_img{
 					display: flex;
 					justify-content: center;
-					width: 100%;
-					height: auto;
+					width: auto;
+					height: 100%;
+					max-width: 100%;
 					object-fit: cover;
 					object-position: center;
 
@@ -306,7 +310,8 @@
 			.swiper-button-next.reviewsNext, .swiper-button-prev.reviewsPrev{
 				position: absolute!important;
 				display: block!important;
-				top: 95%!important;
+				top: auto !important;
+				bottom: -25px !important;
 			}
 			.swiper-button-next.reviewsNext{
 				right: 35%!important;
@@ -441,7 +446,19 @@
 					border: 1px solid var(--main-bg-color);
 					background-color: var(--lazy-dark-color);
 
+					.slide_container{
+						height: 175px!important;
+						@media screen and (max-width: 768px) {
+							height: 200px!important;
+						}
+					}
+					img{
+						max-height: 175px!important;
+					}
+					.slide_description{
 
+						overflow: hidden;
+					}
 					:hover{
 						.slide_description_button{
 							display: flex;
@@ -460,7 +477,7 @@
 					display: flex;
 					align-items: start;
 					gap: 15px;
-					min-height: 175px;
+
 
 					.slide_title{
 						font-family: 'BenzinExtraBold',sans-serif;
@@ -487,6 +504,7 @@
 					padding: 20px;
 					margin: auto;
 					position: relative;
+					display: flex;
 				}
 
 
@@ -585,7 +603,7 @@
 	border: 1px solid var(--border-color);
 	@media screen and (max-width: 768px) {
 		padding: 10px;
-		margin-top: 25px;
+		margin-top: 35px;
 	}
 	.subscript_img{
 		position: absolute;
