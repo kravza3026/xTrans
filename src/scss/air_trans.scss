@@ -1,6 +1,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
 .air_trans_page{
 	width: 100%;
 
@@ -267,7 +268,8 @@ html {
 
 				img{
 					@media screen and (max-width: 768px) {
-						max-width: 50%;
+						gap: 5px;
+						max-width: calc(50% - 10px);
 					}
 				}
 			}
@@ -680,7 +682,7 @@ html {
 		.description_input{
 			margin: 15px 0;
 			form{
-				width: 40%;
+				width: 45%;
 				display: grid;
 				gap: 15px;
 				@media screen and (max-width: 768px) {
@@ -812,6 +814,7 @@ html {
 			justify-items: end;
 			max-width: 50%;
 			@media screen and (max-width: 768px) {
+				display: block;
 				max-width: 100%;
 			}
 			.section_title{
